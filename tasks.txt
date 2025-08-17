@@ -1,0 +1,73 @@
+- i have added the instrucions for createing the website in the zerowastegujarat.instrucions.md. go throught them and create the navbar and hte footer for the website and add them to the templates/shared folder nad also create a templates.js which can be used to add them to the other pages of the website. 
+
+- now create the hero section of the homepage of the website. The hero section should be the best representing the idea and the notion of the website. It should look professional and modern at the same time.
+
+- now create the hero section of the homepage of the website. The hero section should be the best representing the idea and the notion of the website. It should look professional and modern at the same time. the current hero section that we have looks very kiddush and unprofessional make sure that it looks professional I have provided the primary and the secondary colors in the zerowastegujarat.instructions.md use them and then give me the best and the most professional hero section possible
+
+- this is the url of the logo add this wherever necessary in the website images/logo/zerowastegujarat-logo-no-bg.png
+
+- remove the fallbacks from the website, we do not need them anymore. there shouldn't be any falbacks in the entire website.
+
+- change the current colors of the website with only the colors mentioned in the zerowastegujarat.instructions.md file.
+
+- remove all these form the website adn the code realted to them: ✓ ISO Certified ✓ Verra Verified ✓ CCTS Compliant
+
+- dont use golden color mentioned in the website, use only the primary and the secondary colors mentioned in the website. 
+
+- there is no pages folder, all the pages files with .html are to be present in the root folder of the website. 
+
+- Make separate files for css, js and html. so for the current structure that we have, fix this issue for me. Every page should have separate css and js files. in the css and js folders repectively and for teh complex sectoins on the page like the hero section, we should have a separate css and js. make sure that this is being followed.
+
+- remove the get quote from the website, instead, there should be the contact us button.
+
+- move the logo of the navbar a bit towards left. and spread out the content on the navbar a bit more.
+
+- the contact us button on the navbar should look different, currently it is all white, fix this thing for me.
+
+- the logo in the footer shouldn't be black and white, fix this thing for me.
+
+- The bullet points infront of this: Main Facility 2,000 sq ft Industrial Area Ahmedabad, Gujarat, India Ahmedabad:+91-9558358007 Gandhinagar: +91-7878761377 ravedhamecha@gmail.com are looking weird in the footer of the website, remove them. these are still not removed and are not at all looking good.
+
+- remove the scroll to explore thing from the homepage of the website and the code related to it. Also remove this floating box from the hero section of the homepage of the website: 🏭  2,000 sq ft facility
+
+- the contact us and the contact should redirect to the same contact us page, keep only one of them.
+
+- the scroll to top should also be there as a template and should be added to all the pages of hte website as a tempalte. for that make separate html css and js fiels for it nad load it on all the pages using hte tempaltes.js.
+
+- In the navbar when click on the tab, a box appears around it for a second and then disappears. it should not happen, remove this functionality.
+
+- the last section of the footer looks a bit weird. fix the background color of the last section of the footer.
+
+- The footer should also have an option to view the website in the gujarati language. so add an option in the footer for that. how we will tackle that language thing is that the current text will be written in the english language but then we will have a separate file for the gujarati language which will have the same text in the gujarati language. so we will have a separate file for the gujarati language and then we will use that file to show the text in the gujarati language by targeting the classes inside which the text is placed. so in this way we won't have to change anything in the original website written in english text.
+
+- in the our solutions section of the homepage, the learnmore links should always be at the bottom of the cards, fix this thing for me.
+
+- The follow us buttons should be clearly visible in the footer of the website. so make sure that they are clearly visible and not hidden in the footer. in the socials, add the icons of the youtube (@zerowastegujarat)and x.com(@zerowasteGJ).
+
+- remove the sitemap thing from teh footer and hte code realted to ti.
+
+- this is not looking good on the footer, remove this from the footer of hte website. 500kg Daily Processing Capacity 12.5T Monthly Throughput 0% Waste to Landfills 25 Operating Days/Month
+
+- i have added the hero section image for the homepage of the website. integrate it on hte hero section of the hoempage. Make sure that it integrates beautifull, don't change the image for that, it the content, desing on the hero section of the hoempage needs to be changed, you can do it. but make sure that image blends properly into the website nad hte hero sectoin of the website. 
+
+- remove the box around the hero sectoin image on the homepage of the website. Also remove the circular floating blobs in the hero section of the website.
+
+- the our solutions section background color should same as that of hte website.
+
+- teh background of the image on the hero section of the homepage feels different is houldn't remove any background it ahs.
+
+- remove the red color box around the image on the hero section of the homepage of the website.   
+
+- To the navbar, add something which indicated that a particular tab is active. so when the user is on the homepage, the home tab should be highlighted and when the user is on the about page, the about tab should be highlighted. so add that functionality to the navbar.
+
+- Also make sure that the upon hovering on the navbar, something happens which indicates that a particular tab is being hovered over. This could be a change in background color, an underline effect, or any other visual cue that fits the design of the website.
+
+- the background color of the hero section of the homepage should be greenish in the start and should be become white when it reaches the bottom of the hero section and there after, the background color of all the sections on the homepage should be white and they should be distinguished by only their headings.
+
+- write the code for the chatbot which contains defined questions and answers to those questions. first page contains the categories of the questions followed by a set of questions and the last questions in each category should be that if you didn't find your questions and then give them the contact information along with the contact form on the contact us page link.
+
+in the Contact Information heading on the footer of the website, there should be something to distinguish the points from each other. it shouldn't look kiddush as well as it should look professional. so add something to distinguish the points from each other.
+
+Zero Waste Gujarat logo and the zero waste gujarat written in the navbar should be link to the homepage with text decoration as none.
+
+add some shade or patter 

@@ -1,0 +1,347 @@
+/* Navbar Styles for Zero Waste Gujarat */
+
+:root {
+  --primary-color: #215f44;
+  --secondary-color: #fff6ea;
+  --text-dark: #333333;
+  --white: #FFFFFF;
+  --navbar-height: 80px;
+  --transition: all 0.3s ease;
+}
+
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(46, 93, 49, 0.1);
+  z-index: 1000;
+  transition: var(--transition);
+  height: var(--navbar-height);
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(46, 93, 49, 0.1);
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Brand Section */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.25rem;
+  transition: var(--transition);
+  flex-shrink: 0;
+  margin-right: auto;
+  padding-left: 0;
+}
+
+.navbar-brand:hover {
+  color: var(--primary-color);
+}
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-brand-text {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Navigation Menu */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: var(--transition);
+  letter-spacing: 0.5px;
+}
+
+.navbar-link:hover {
+  color: var(--primary-color);
+}
+
+/* Active link indicator */
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 100%;
+}
+
+/* Action Buttons */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.cta-button {
+  background: var(--primary-color);
+  color: var(--white);
+  border: 2px solid var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(33, 95, 68, 0.2);
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(33, 95, 68, 0.3);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(33, 95, 68, 0.2);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 2px 0;
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+/* Mobile menu toggle animation */
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 2rem;
+  }
+  
+  .navbar-nav {
+    margin: 0 1.5rem;
+  }
+  
+  .navbar-menu {
+    gap: 2rem;
+  }
+  
+  .navbar-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+  }
+  
+  .navbar-container {
+    padding: 0 1rem;
+  }
+  
+  .navbar-brand {
+    margin-right: 0;
+  }
+  
+  .navbar-brand-text {
+    font-size: 1.1rem;
+  }
+  
+  .navbar-logo {
+    height: 35px;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .navbar-nav {
+    position: fixed;
+    top: var(--navbar-height);
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    background: var(--white);
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: left 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin: 0;
+  }
+  
+  .navbar-nav.active {
+    left: 0;
+  }
+  
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 0;
+    gap: 0;
+  }
+  
+  .navbar-item {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar-link {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(46, 93, 49, 0.1);
+    width: 100%;
+  }
+  
+  .navbar-link::after {
+    display: none;
+  }
+  
+  .navbar-link:hover {
+    background: var(--secondary-color);
+  }
+  
+  .cta-button {
+    margin: 1rem 2rem;
+    width: calc(100% - 4rem);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 0.75rem;
+  }
+  
+  .navbar-brand {
+    gap: 0.5rem;
+  }
+  
+  .navbar-brand-text {
+    font-size: 1rem;
+  }
+  
+  .navbar-logo {
+    height: 30px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .navbar {
+    border-bottom: 2px solid var(--text-dark);
+  }
+  
+  .navbar-link:hover {
+    background: var(--secondary-color);
+  }
+}
+
+/* Focus states for accessibility */
+.navbar-link:focus,
+.cta-button:focus,
+.mobile-menu-toggle:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Smooth page transition preparation */
+body {
+  padding-top: var(--navbar-height);
+}

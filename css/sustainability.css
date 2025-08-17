@@ -1,0 +1,67 @@
+/* Sustainability Page Styles */
+
+:root {
+  --primary-color: #215f44;
+  --secondary-color: #fff6ea;
+  --text-dark: #333333;
+  --white: #FFFFFF;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Sustainability specific styles will be added here */
+.sustainability-hero {
+  background: var(--secondary-color);
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+
+.sustainability-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.sustainability-hero p {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .sustainability-hero {
+    padding: 4rem 0 3rem;
+  }
+  
+  .sustainability-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .sustainability-hero p {
+    font-size: 1.1rem;
+  }
+}
