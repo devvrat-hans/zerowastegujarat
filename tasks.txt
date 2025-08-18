@@ -66,8 +66,75 @@
 
 - write the code for the chatbot which contains defined questions and answers to those questions. first page contains the categories of the questions followed by a set of questions and the last questions in each category should be that if you didn't find your questions and then give them the contact information along with the contact form on the contact us page link.
 
-in the Contact Information heading on the footer of the website, there should be something to distinguish the points from each other. it shouldn't look kiddush as well as it should look professional. so add something to distinguish the points from each other.
+- modify the content of the website to include the things mentioned in the mission.txt file. It shouldn't look like that we only do the textile realted stuff. The content should be added to the homepage and should be in the hero section of the homepage. The content should be added in a way that it looks professional and modern.
 
-Zero Waste Gujarat logo and the zero waste gujarat written in the navbar should be link to the homepage with text decoration as none.
+- in the Contact Information heading on 'the footer' of the website, there should be something to distinguish the points from each other. it shouldn't look kiddush as well as it should look professional. so add something to distinguish the points from each other.
 
-add some shade or patter 
+- Zero Waste Gujarat logo and the zero waste gujarat written in the navbar should be link to the homepage with text decoration as none.
+
+- add some shade or pattern around the image in the hero section of the homepage of the website. The image should not be plain, it should have some shade or pattern around it to make it look more professional and modern.
+
+- make the last section of the footer look like the our solutions section on the footer of the website. And then remove the our solutions section on the footer of the website. The last section of the footer should have the same background color as that of the our solutions section on the footer of the website.
+
+- Now we need to focus on the cta of the website. The cta should be prominent and encourage users to take action, such as "Get Started", "Contact Us", or "Learn More". It should stand out visually and be placed in a strategic location on the homepage, such as the hero section or at the end of each section. also improve its css.
+
+- keep the background color of the contact information section of the footer same as that of the footer of the website.
+
+- remove the our solutions section on hte footer of the website. The last section of the footer should have the same background color as that of the our solutions section on the footer of the website.  
+
+- remove the rocket emoji from the entire website. 
+
+- remove Start Collection, Visit Facility and Buy Credits from the homepage of the website.
+
+- remove the get free quote
+
+- the contact information section of the footer should be like the other sections of the website. do that for me.
+
+- the hero section of the website doesn't look good at all, there is a lot of unecesary contetn on the hero section of the homeapge of hte website. and the hero section should be such that it contains the only two columns, image on the right hand side and the text nad other things on the left hadn side.
+
+- the cta that we ahve after the our solutions section which starts with teh Ready to Start Your Sustainability Journey?, should be in teh cta section of all the pages of the website wihcih is just above the footer. create a new cta template and add ti to the tempaltes shared fodler and this should load using hte templates.js file on all the pages of the website.
+
+- remove any background that the image that we have on the hero section of the homepage of the website. Also go through rules.md once you complete the tasks assinged to you.
+
+- now lets just focus on the footer of the website. The footer should be clean and modern and all the section in the footer should have the same background color. Also go through rules.md once you complete the tasks assigned to you.
+
+- delete the complete footer.html and rewrite its code. Also go through the rules.md once you complete the tasks assigned to you. 
+
+- the background color of the contact information section on the footer seems to have a differnt color than rest of the footer. make sure it is same as that of hte. rest of the footer. Nothing extra to be done.
+
+- make the footer of the website. files to be used: footer.html, footer.css, footer.js. Also go through the rules.md once you complete the tasks assigned to you. 
+
+- the page is loading again and again in the localhost, fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- from the footer, remove the our solutions section. Also go through the rules.md once you complete the tasks assigned to you.    
+
+- change the color of the text inside the contact information section because its not visible because of the light background that we have. Also go through the rules.md once you complete the tasks assigned to you.
+
+- remove the contact us widget in the bottom left corner of the website. Also remove the code related to it. Also go through the rules.md once you complete the tasks assigned to you.    
+
+- the hero image that we have on the homepage of the website seems to be towards the right hand side, it should be in the middle of the space left after the text on the left side of the hero section. Also go through the rules.md once you complete the tasks assigned to you.
+
+- remove the option to add the gujarati text adn all that sutff from the entire website, we will be making the entire website in english only. Also go through the rules.md once you complete the tasks assigned to you.  
+
+- remove the subtitle in the hero section and its entire code from the codebase. i have already commented it in the index.html. just remove the entire code related to it. Also go through the rules.md once you complete the tasks assigned to you.
+
+- increase the size of the image in the hero section and make sure that after the size increamennt, it stays in the middle of the right section of the hero section as it is now. Also go through the rules.md once you complete the tasks assigned to you.   
+
+- when i click on any of tabs in the navbar, a box appears around it for a second and then disappears. it should not happen, remove this functionality. Also go through the rules.md once you complete the tasks assigned to you. 
+
+- all the columns of the footer are not consistant at all. make them consistant as far as the color of the text is concerned. Also go through the rules.md once you complete the tasks assigned to you.   
+
+- expand the width of the footer to entire width of the screen. Also go through the rules.md once you complete the tasks assigned to you.
+
+- the section having this heading: Ready to Start Your Sustainability Journey?, should be a template with cta.html, cta.css and cta.js files. This should be added to the templates/shared folder and should be loaded using the templates.js file on all the pages of the website. Remvoe the code files realted to any cta if we have currently in the worksapce and then make these. Also go through the rules.md once you complete the tasks assigned to you.
+
+- the Learn More → links should be at the bottom of the cards on the homepage of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- there is a lot of gap between the quick links and the contact information section on the footer of the website. remove that gap and make it look consistant with the rest of the footer. Also go through the rules.md once you complete the tasks assigned to you.  
+
+remove both these buttons and the code related to them from the homepage of the website: Learn Our Story Discover our mission Partner With Us Start your project. Also go through the rules.md once you complete the tasks assigned to you.
+
+on the homepage of the website, add these stats: 500kg Daily Processing 12.5T Monthly Output 0% Waste to Landfill, after the our solutions section and it should look like they are on band by changing their background. Also go through the rules.md once you complete the tasks assigned to you. 
+
+- the current cta section is looking very bad, change its css to have a light background with green text and all that stuff. It should look professional and modern and should be good looking. Also go through the rules.md once you complete the tasks assigned to you.
+

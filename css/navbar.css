@@ -56,6 +56,14 @@
 
 .navbar-brand:hover {
   color: var(--primary-color);
+  text-decoration: none;
+}
+
+.navbar-brand:visited,
+.navbar-brand:active,
+.navbar-brand:focus {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 .navbar-logo {
@@ -334,11 +342,20 @@
 }
 
 /* Focus states for accessibility */
-.navbar-link:focus,
+.navbar-link:focus {
+  outline: none;
+  color: var(--primary-color);
+}
+
+.navbar-link:focus::after {
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
 .cta-button:focus,
 .mobile-menu-toggle:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(33, 95, 68, 0.3);
 }
 
 /* Smooth page transition preparation */

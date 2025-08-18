@@ -29,6 +29,7 @@ class TemplateLoader {
       await Promise.all([
         this.loadTemplate('navbar', 'navbar-container'),
         this.loadTemplate('footer', 'footer-container'),
+        this.loadTemplate('cta', 'cta-container'),
         this.loadTemplate('scroll-to-top', 'scroll-to-top-container')
       ]);
       
@@ -100,7 +101,8 @@ class TemplateLoader {
   loadStylesheets() {
     const stylesheets = [
       { href: `${this.basePath}css/navbar.css`, id: 'navbar-css' },
-      { href: `${this.basePath}css/footer.css`, id: 'footer-css' }
+      { href: `${this.basePath}css/footer.css`, id: 'footer-css' },
+      { href: `${this.basePath}css/cta.css`, id: 'cta-css' }
     ];
     
     stylesheets.forEach(stylesheet => {
@@ -118,7 +120,8 @@ class TemplateLoader {
   loadScripts() {
     const scripts = [
       { src: `${this.basePath}js/navbar.js`, id: 'navbar-js' },
-      { src: `${this.basePath}js/footer.js`, id: 'footer-js' }
+      { src: `${this.basePath}js/footer.js`, id: 'footer-js' },
+      { src: `${this.basePath}js/cta.js`, id: 'cta-js' }
     ];
     
     scripts.forEach(script => {

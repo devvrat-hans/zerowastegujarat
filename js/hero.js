@@ -129,8 +129,7 @@ class HeroSection {
   setupTypewriterEffect() {
     const titleElements = {
       highlight: document.querySelector('.title-highlight'),
-      main: document.querySelector('.title-main'),
-      subtitle: document.querySelector('.title-subtitle')
+      main: document.querySelector('.title-main')
     };
 
     // Initial state
@@ -157,14 +156,6 @@ class HeroSection {
         titleElements.main.style.transform = 'translateY(0)';
       }
     }, 600);
-
-    setTimeout(() => {
-      if (titleElements.subtitle) {
-        titleElements.subtitle.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        titleElements.subtitle.style.opacity = '1';
-        titleElements.subtitle.style.transform = 'translateY(0)';
-      }
-    }, 1000);
   }
 
   // Method to update hero metrics dynamically

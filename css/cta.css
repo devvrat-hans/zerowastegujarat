@@ -1,0 +1,225 @@
+/* CTA Section Styles */
+:root {
+  --primary-color: #215f44;
+  --secondary-color: #fff6ea;
+  --white: #FFFFFF;
+  --transition: all 0.3s ease;
+}
+
+.cta-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #fff6ea 0%, #f8f9fa 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(33, 95, 68, 0.02) 0%, rgba(33, 95, 68, 0.05) 100%);
+  z-index: 1;
+}
+
+.cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(33, 95, 68, 0.1);
+  border: 1px solid rgba(33, 95, 68, 0.1);
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cta-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #215f44 0%, #2e7d5a 50%, #215f44 100%);
+}
+
+.cta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(33, 95, 68, 0.15);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #215f44;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.cta-description {
+  font-size: 1.2rem;
+  color: #4a6741;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary-cta {
+  background: linear-gradient(135deg, #215f44 0%, #2e7d5a 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(33, 95, 68, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.btn-primary-cta:hover::before {
+  left: 100%;
+}
+
+.btn-primary-cta:hover {
+  background: linear-gradient(135deg, #1a4d37 0%, #26674a 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(33, 95, 68, 0.4);
+}
+
+.btn-primary-cta:active {
+  transform: translateY(-1px) scale(1.01);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-icon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary-cta:hover .btn-icon {
+  transform: translateX(4px);
+}
+
+/* Animation for when CTA comes into view */
+@keyframes ctaFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cta-card.animate-in {
+  animation: ctaFadeInUp 0.8s ease-out forwards;
+}
+
+.cta-card.animate-in .cta-title {
+  animation: ctaFadeInUp 0.8s ease-out 0.2s both;
+}
+
+.cta-card.animate-in .cta-description {
+  animation: ctaFadeInUp 0.8s ease-out 0.4s both;
+}
+
+.cta-card.animate-in .cta-actions {
+  animation: ctaFadeInUp 0.8s ease-out 0.6s both;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 3rem 1rem;
+  }
+  
+  .cta-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .cta-title {
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-primary-cta {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .cta-description {
+    font-size: 1rem;
+  }
+  
+  .btn-primary-cta {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
