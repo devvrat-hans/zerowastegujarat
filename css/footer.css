@@ -16,7 +16,7 @@
 .footer-main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 3rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -97,13 +97,16 @@
   color: #fff6ea;
   text-decoration: none;
   font-size: 0.95rem;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   opacity: 0.9;
+  display: inline-block;
+  position: relative;
 }
 
 .footer-nav a:hover {
   color: #ffffff;
   opacity: 1;
+  transform: translateX(8px);
 }
 
 /* Contact Information */
@@ -204,7 +207,7 @@
   .footer-main {
     grid-template-columns: 1fr;
     padding: 2rem 1rem;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   
   .footer-company {

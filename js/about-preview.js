@@ -51,21 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
         feature.style.transition += ', transform 0.3s ease';
     });
     
-    // Animate the main heading
+    // Animate the main heading - removed for instant loading
     const aboutHeading = document.querySelector('.about-preview h2');
     if (aboutHeading) {
-        const headingObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        aboutHeading.style.opacity = '0';
-        aboutHeading.style.transform = 'translateY(20px)';
-        aboutHeading.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        headingObserver.observe(aboutHeading);
+        // Heading loads immediately, no animation delay
+        console.log('About heading loaded instantly');
     }
 });

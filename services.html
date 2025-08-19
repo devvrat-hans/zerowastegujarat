@@ -18,12 +18,44 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Critical CSS for immediate loading -->
+  <style>
+    /* Critical CSS for preventing layout shifts */
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+    }
+    
+    /* Prevent flash of unstyled content - load immediately */
+    .services-hero, .process-overview, .process-steps, .facility-info {
+      opacity: 1;
+    }
+    
+    /* Ensure all headings load immediately */
+    .services-hero h1, .process-overview h2, .process-steps h2, 
+    .facility-info h2, h1, h2, h3, h4, h5, h6 {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  </style>
+  
   <!-- Shared Component CSS -->
   <link rel="stylesheet" href="./css/navbar.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/scroll-to-top.css">
+  <link rel="stylesheet" href="./css/enhanced-cta.css">
   
   <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="./css/performance.css">
   <link rel="stylesheet" href="./css/services.css">
 </head>
 <body>
@@ -32,7 +64,278 @@
   
   <!-- Main Content -->
   <main>
-    <!-- Services content will be added here -->
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+      <div class="container">
+        <div class="services-hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">♻️</span>
+            <span>Comprehensive Textile Recycling Solutions</span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span class="title-highlight">Complete Waste-to-Value</span>
+            <span class="title-main">Transformation Process</span>
+          </h1>
+          
+          <p class="hero-description">
+            From collection to dispatch, we offer end-to-end textile recycling services 
+            that transform waste into valuable products. Our 5-step process ensures maximum 
+            resource recovery and zero waste to landfills.
+          </p>
+          
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <div class="metric-number">500</div>
+              <div class="metric-label">kg/day capacity</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">2000</div>
+              <div class="metric-label">sq ft facility</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">5</div>
+              <div class="metric-label">step process</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Overview Section -->
+    <section class="process-overview">
+      <div class="container">
+        <div class="overview-header">
+          <h2>Our Recycling Process</h2>
+          <p>A systematic approach to transforming textile waste into valuable resources</p>
+        </div>
+        
+        <div class="overview-content">
+          <div class="collection-sources">
+            <h3>Collection Sources</h3>
+            <div class="sources-grid">
+              <div class="source-card">
+                <div class="source-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 7h-9"/>
+                    <path d="M14 17H5"/>
+                    <path d="M17 11H7"/>
+                    <path d="M5 7h.01"/>
+                    <path d="M5 11h.01"/>
+                    <path d="M5 17h.01"/>
+                  </svg>
+                </div>
+                <h4>Garment Factories</h4>
+                <p>Direct partnerships with manufacturing units for pre-consumer textile waste collection</p>
+              </div>
+              
+              <div class="source-card">
+                <div class="source-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 3h18v18H3V3z"/>
+                    <path d="M9 9h6v6H9V9z"/>
+                  </svg>
+                </div>
+                <h4>Rag Dealers</h4>
+                <p>Network of local dealers providing mixed textile waste from various sources</p>
+              </div>
+              
+              <div class="source-card">
+                <div class="source-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                  </svg>
+                </div>
+                <h4>Post-Consumer Partnerships</h4>
+                <p>Collaborative programs for collecting used clothing and household textiles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-Step Process Section -->
+    <section class="process-steps">
+      <div class="container">
+        <div class="steps-header">
+          <h2>5-Step Transformation Process</h2>
+          <p>From raw waste to valuable products through our systematic approach</p>
+        </div>
+        
+        <div class="steps-timeline">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Collection & Sorting</h3>
+              <p>
+                Textile waste is collected from our partner sources and meticulously sorted by 
+                fiber type, color, and quality. This initial categorization ensures optimal 
+                processing efficiency and end-product quality.
+              </p>
+              <div class="step-features">
+                <span class="feature-tag">Quality Assessment</span>
+                <span class="feature-tag">Color Segregation</span>
+                <span class="feature-tag">Fiber Classification</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Shredding & Fiber Opening</h3>
+              <p>
+                Sorted textiles undergo mechanical shredding to break down fabric structures. 
+                Our fiber opening machines separate individual fibers while maintaining their 
+                integrity for downstream processing.
+              </p>
+              <div class="step-features">
+                <span class="feature-tag">Mechanical Processing</span>
+                <span class="feature-tag">Fiber Preservation</span>
+                <span class="feature-tag">Size Standardization</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Carding for Fiber Output</h3>
+              <p>
+                The carding process aligns and blends fibers to create uniform, high-quality 
+                recycled fiber suitable for nonwoven applications and further processing into 
+                new textile products.
+              </p>
+              <div class="step-features">
+                <span class="feature-tag">Fiber Alignment</span>
+                <span class="feature-tag">Quality Enhancement</span>
+                <span class="feature-tag">Nonwoven Ready</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Pulping/Molding for Packaging</h3>
+              <p>
+                Cotton fibers are processed into pulp for creating sustainable packaging solutions. 
+                Our molding technology produces eco-friendly alternatives to traditional packaging 
+                materials.
+              </p>
+              <div class="step-features">
+                <span class="feature-tag">Eco Packaging</span>
+                <span class="feature-tag">Custom Molding</span>
+                <span class="feature-tag">Biodegradable</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>Baling/Packing & Dispatch</h3>
+              <p>
+                Final products are professionally packaged, baled for efficient transportation, 
+                and dispatched to customers. Our quality control ensures every shipment meets 
+                industry standards.
+              </p>
+              <div class="step-features">
+                <span class="feature-tag">Quality Control</span>
+                <span class="feature-tag">Efficient Packaging</span>
+                <span class="feature-tag">Timely Dispatch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facility Information Section -->
+    <section class="facility-info">
+      <div class="container">
+        <div class="facility-content">
+          <div class="facility-text">
+            <h2>Our State-of-the-Art Facility</h2>
+            <p class="facility-intro">
+              Located in Ahmedabad's thriving industrial area, our 2,000 square foot facility 
+              is equipped with cutting-edge machinery and staffed by experienced professionals 
+              dedicated to sustainable textile processing.
+            </p>
+            
+            <div class="facility-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                  </svg>
+                </div>
+                <div class="highlight-content">
+                  <h4>Strategic Location</h4>
+                  <p>Ahmedabad industrial area with excellent connectivity and logistics support</p>
+                </div>
+              </div>
+              
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M9 12l2 2 4-4"/>
+                  </svg>
+                </div>
+                <div class="highlight-content">
+                  <h4>Advanced Equipment</h4>
+                  <p>Modern machinery ensuring efficient processing and consistent quality output</p>
+                </div>
+              </div>
+              
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <div class="highlight-content">
+                  <h4>Expert Team</h4>
+                  <p>Skilled professionals committed to delivering excellence in every process</p>
+                </div>
+              </div>
+              
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                  </svg>
+                </div>
+                <div class="highlight-content">
+                  <h4>Environmental Compliance</h4>
+                  <p>All operations meet environmental standards and sustainability requirements</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="facility-cta">
+              <a href="./contact.html" class="btn-primary">
+                <span>Schedule a Facility Tour</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="./about.html" class="btn-secondary">
+                <span>Learn About Our Mission</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   
   <!-- CTA Section -->

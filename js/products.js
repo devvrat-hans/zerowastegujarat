@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
         loadTemplates();
     }
     
-    // Products page specific functionality will be added here
     console.log('Products page loaded');
     
     // Smooth scrolling for internal links
@@ -18,13 +17,106 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({
-                    behavior: 'smooth'
+                    behavior: 'smooth',
+                    block: 'start'
                 });
             }
         });
     });
-    
-    // Fade in animation for elements
+
+    // Add hover effects for product category cards
+    const productCategories = document.querySelectorAll('.product-category');
+    productCategories.forEach(category => {
+        category.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+        });
+        
+        category.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Add click-to-expand functionality for category features
+    const categoryFeatures = document.querySelectorAll('.category-features');
+    categoryFeatures.forEach(features => {
+        const items = features.querySelectorAll('.feature-item');
+        items.forEach((item, index) => {
+            if (index > 2) {
+                item.style.display = 'none';
+            }
+        });
+        
+        if (items.length > 3) {
+            const showMoreBtn = document.createElement('button');
+            showMoreBtn.textContent = 'Show More Features';
+            showMoreBtn.className = 'show-more-btn';
+            showMoreBtn.style.cssText = `
+                background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 20px;
+                font-size: 0.875rem;
+                cursor: pointer;
+                margin-top: 1rem;
+                transition: all 0.3s ease;
+            `;
+            
+            let expanded = false;
+            showMoreBtn.addEventListener('click', function() {
+                expanded = !expanded;
+                items.forEach((item, index) => {
+                    if (index > 2) {
+                        item.style.display = expanded ? 'flex' : 'none';
+                    }
+                });
+                this.textContent = expanded ? 'Show Less Features' : 'Show More Features';
+            });
+            
+            features.appendChild(showMoreBtn);
+        }
+    });
+
+    // Animate metric numbers on scroll
+    const metricNumbers = document.querySelectorAll('.metric-number');
+    const animateNumbers = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const finalValue = target.textContent.trim();
+                
+                // Only animate if it's a number
+                if (finalValue.match(/^\d+$/)) {
+                    const finalNumber = parseInt(finalValue);
+                    let currentNumber = 0;
+                    const increment = finalNumber / 30;
+                    
+                    const timer = setInterval(() => {
+                        currentNumber += increment;
+                        if (currentNumber >= finalNumber) {
+                            currentNumber = finalNumber;
+                            clearInterval(timer);
+                        }
+                        target.textContent = Math.floor(currentNumber);
+                    }, 50);
+                }
+                
+                observer.unobserve(target);
+            }
+        });
+    };
+
+    const numberObserver = new IntersectionObserver(animateNumbers, {
+        threshold: 0.5
+    });
+
+    metricNumbers.forEach(number => {
+        if (number.textContent.trim().match(/^\d+$/)) {
+            numberObserver.observe(number);
+        }
+    });
+
+    // Enhanced fade-in animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -35,16 +127,80 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                
+                // Add staggered animation for benefit cards
+                if (entry.target.classList.contains('benefit-card')) {
+                    const cards = document.querySelectorAll('.benefit-card');
+                    const index = Array.from(cards).indexOf(entry.target);
+                    entry.target.style.transitionDelay = `${index * 0.1}s`;
+                }
             }
         });
     }, observerOptions);
     
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.fade-in');
+    const animateElements = document.querySelectorAll('.product-category, .benefit-card, .process-step');
     animateElements.forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
         observer.observe(el);
     });
+
+    // Add loading animation for visual placeholders
+    const visualPlaceholders = document.querySelectorAll('.visual-placeholder');
+    visualPlaceholders.forEach(placeholder => {
+        placeholder.addEventListener('click', function() {
+            this.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 200);
+        });
+    });
+
+    // Process flow animation on scroll
+    const processSteps = document.querySelectorAll('.process-step');
+    const processArrows = document.querySelectorAll('.process-arrow');
+    
+    const processObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const steps = document.querySelectorAll('.process-step');
+                const arrows = document.querySelectorAll('.process-arrow');
+                
+                steps.forEach((step, index) => {
+                    setTimeout(() => {
+                        step.style.opacity = '1';
+                        step.style.transform = 'translateY(0)';
+                        
+                        if (arrows[index]) {
+                            setTimeout(() => {
+                                arrows[index].style.opacity = '1';
+                                arrows[index].style.transform = 'scale(1)';
+                            }, 300);
+                        }
+                    }, index * 200);
+                });
+                
+                processObserver.disconnect();
+            }
+        });
+    }, { threshold: 0.2 });
+
+    if (processSteps.length > 0) {
+        // Initially hide all steps and arrows
+        processSteps.forEach(step => {
+            step.style.opacity = '0';
+            step.style.transform = 'translateY(20px)';
+            step.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        processArrows.forEach(arrow => {
+            arrow.style.opacity = '0';
+            arrow.style.transform = 'scale(0.5)';
+            arrow.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        processObserver.observe(processSteps[0]);
+    }
 });

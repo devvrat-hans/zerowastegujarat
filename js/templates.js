@@ -102,7 +102,7 @@ class TemplateLoader {
     const stylesheets = [
       { href: `${this.basePath}css/navbar.css`, id: 'navbar-css' },
       { href: `${this.basePath}css/footer.css`, id: 'footer-css' },
-      { href: `${this.basePath}css/cta.css`, id: 'cta-css' }
+      { href: `${this.basePath}css/enhanced-cta.css`, id: 'enhanced-cta-css' }
     ];
     
     stylesheets.forEach(stylesheet => {

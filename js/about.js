@@ -1,4 +1,4 @@
-// About Page JavaScript
+// About Page JavaScript - Optimized for instant loading
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize templates
@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
         loadTemplates();
     }
     
-    // About page specific functionality will be added here
-    console.log('About page loaded');
+    // About page loaded - no animation delays
+    console.log('About page loaded instantly');
     
     // Smooth scrolling for internal links
     const links = document.querySelectorAll('a[href^="#"]');
@@ -24,27 +24,78 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Fade in animation for elements
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // Enhanced hover effects for interactive elements
+    const cards = document.querySelectorAll('.promise-card, .contact-card, .vision-area, .stat-item');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.willChange = 'transform';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.willChange = 'auto';
+        });
+    });
     
-    const observer = new IntersectionObserver(function(entries) {
+    // Smooth counter animation for stats (only when visible, no loading delay)
+    const statNumbers = document.querySelectorAll('.stat-number');
+    const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                const target = entry.target;
+                const finalValue = target.textContent;
+                animateCounter(target, finalValue);
+                statsObserver.unobserve(target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.7 });
     
-    // Observe elements for animation
-    const animateElements = document.querySelectorAll('.fade-in');
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+    statNumbers.forEach(stat => {
+        statsObserver.observe(stat);
+    });
+    
+    // Counter animation function
+    function animateCounter(element, finalValue) {
+        const isDecimal = finalValue.includes('.');
+        const numericValue = parseFloat(finalValue);
+        const duration = 1500;
+        const steps = 60;
+        const stepValue = numericValue / steps;
+        const stepDuration = duration / steps;
+        
+        let currentValue = 0;
+        let currentStep = 0;
+        
+        const interval = setInterval(() => {
+            currentStep++;
+            currentValue += stepValue;
+            
+            if (currentStep >= steps) {
+                currentValue = numericValue;
+                clearInterval(interval);
+            }
+            
+            const displayValue = isDecimal ? currentValue.toFixed(1) : Math.floor(currentValue);
+            element.textContent = displayValue;
+        }, stepDuration);
+    }
+    
+    // Optimize images loading
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.loading = 'lazy';
+    });
+    
+    // Add focus management for better accessibility
+    const focusableElements = document.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+    focusableElements.forEach(element => {
+        element.addEventListener('focus', function() {
+            this.style.outline = '2px solid var(--primary-color)';
+            this.style.outlineOffset = '2px';
+        });
+        
+        element.addEventListener('blur', function() {
+            this.style.outline = '';
+            this.style.outlineOffset = '';
+        });
     });
 });

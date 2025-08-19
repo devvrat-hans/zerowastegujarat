@@ -125,37 +125,19 @@ class HeroSection {
     });
   }
 
-  // Setup typewriter effect for hero title
+  // Setup typewriter effect for hero title - disabled for instant loading
   setupTypewriterEffect() {
     const titleElements = {
       highlight: document.querySelector('.title-highlight'),
       main: document.querySelector('.title-main')
     };
 
-    // Initial state
+    // Title elements load immediately, no animation delay
     Object.values(titleElements).forEach(el => {
       if (el) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
+        console.log('Hero title element loaded instantly');
       }
     });
-
-    // Animate in sequence
-    setTimeout(() => {
-      if (titleElements.highlight) {
-        titleElements.highlight.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        titleElements.highlight.style.opacity = '1';
-        titleElements.highlight.style.transform = 'translateY(0)';
-      }
-    }, 200);
-
-    setTimeout(() => {
-      if (titleElements.main) {
-        titleElements.main.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        titleElements.main.style.opacity = '1';
-        titleElements.main.style.transform = 'translateY(0)';
-      }
-    }, 600);
   }
 
   // Method to update hero metrics dynamically

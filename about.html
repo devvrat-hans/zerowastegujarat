@@ -18,12 +18,44 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Critical CSS for immediate loading -->
+  <style>
+    /* Critical CSS for preventing layout shifts */
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+    }
+    
+    /* Prevent flash of unstyled content - load immediately */
+    .about-hero, .company-story, .our-promise, .future-vision {
+      opacity: 1;
+    }
+    
+    /* Ensure all headings load immediately */
+    .about-hero h1, .company-story h2, .our-promise h2, 
+    .future-vision h2, h1, h2, h3, h4, h5, h6 {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  </style>
+  
   <!-- Shared Component CSS -->
   <link rel="stylesheet" href="./css/navbar.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/scroll-to-top.css">
+  <link rel="stylesheet" href="./css/enhanced-cta.css">
   
   <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="./css/performance.css">
   <link rel="stylesheet" href="./css/about.css">
 </head>
 <body>
@@ -32,7 +64,203 @@
   
   <!-- Main Content -->
   <main>
-    <!-- About content will be added here -->
+    <!-- About Hero Section -->
+    <section class="about-hero">
+      <div class="container">
+        <div class="about-hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">🌱</span>
+            <span>Transforming Waste into Value Since Our Beginning</span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span class="title-highlight">Every Thread</span>
+            <span class="title-main">Has a Second Life</span>
+          </h1>
+          
+          <p class="hero-description">
+            At Zero Waste Gujarat, we believe that every thread has a second life. 
+            We are a pioneering textile recycling startup based in Ahmedabad, Gujarat, 
+            dedicated to transforming textile waste into valuable products and creating 
+            a sustainable future for generations to come.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Story Section -->
+    <section class="company-story">
+      <div class="container">
+        <div class="story-content">
+          <div class="story-text">
+            <h2>Our Mission & Story</h2>
+            <div class="mission-statement">
+              <blockquote>
+                "At Zero Waste Gujarat, we believe that every thread has a second life"
+              </blockquote>
+              <p class="tagline">Designing a cleaner, greener tomorrow, one recycled thread at a time</p>
+            </div>
+            
+            <div class="story-details">
+              <p>
+                Founded with a vision to revolutionize textile waste management in Gujarat, 
+                Zero Waste Gujarat operates from a 2,000 sq ft facility in Ahmedabad's industrial area. 
+                Our mission extends beyond textile recycling - we are building a comprehensive 
+                waste-to-value ecosystem.
+              </p>
+              
+              <p>
+                While textile recycling is our current focus, our future vision encompasses expanding 
+                to include biomass (waste cooking oil) to bio fuel conversion, plastic repurposing, 
+                and various other waste-to-value initiatives. We believe in creating a circular economy 
+                where nothing goes to waste.
+              </p>
+            </div>
+
+            <!-- Key Stats -->
+            <div class="story-stats">
+              <div class="stat-item">
+                <div class="stat-number">500</div>
+                <div class="stat-label">kg/day Processing Capacity</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">12.5</div>
+                <div class="stat-label">Tonnes Monthly Throughput</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">0</div>
+                <div class="stat-label">% Waste to Landfills</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Promise Section -->
+    <section class="our-promise">
+      <div class="container">
+        <div class="promise-header">
+          <h2>Our Promise</h2>
+          <p>Four pillars that define our commitment to sustainability and innovation</p>
+        </div>
+        
+        <div class="promise-grid">
+          <div class="promise-card">
+            <div class="promise-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7v10c0 5.55 3.84 9.95 9 11 5.16-1.05 9-5.45 9-11V7l-10-5z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3>Zero Waste Commitment</h3>
+            <p>
+              We are committed to ensuring that no textile waste reaches landfills. 
+              Every piece of fabric that enters our facility is transformed into 
+              valuable products, contributing to a truly circular economy.
+            </p>
+          </div>
+
+          <div class="promise-card">
+            <div class="promise-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+                <path d="M12 12v9"/>
+              </svg>
+            </div>
+            <h3>Local Impact</h3>
+            <p>
+              Based in Gujarat's industrial heartland, we create local employment, 
+              support regional businesses, and contribute to the state's sustainable 
+              development goals while building strong community partnerships.
+            </p>
+          </div>
+
+          <div class="promise-card">
+            <div class="promise-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4"/>
+                <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
+                <path d="M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
+                <path d="M12 21c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
+                <path d="M12 3c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
+              </svg>
+            </div>
+            <h3>Innovative Products</h3>
+            <p>
+              Through cutting-edge recycling processes, we create high-quality 
+              recycled fiber, nonwovens, sustainable packaging solutions, and 
+              generate verified carbon credits for environmental impact.
+            </p>
+          </div>
+
+          <div class="promise-card">
+            <div class="promise-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                <path d="M9 1v6l3-3 3 3V1"/>
+              </svg>
+            </div>
+            <h3>Climate Action</h3>
+            <p>
+              Every ton of textile waste we process prevents harmful emissions and 
+              generates carbon credits. We're actively contributing to climate change 
+              mitigation through measurable environmental impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future Vision Section -->
+    <section class="future-vision">
+      <div class="container">
+        <div class="vision-content">
+          <div class="vision-text">
+            <h2>Our Future Vision</h2>
+            <p class="vision-intro">
+              While textile recycling is our foundation, we envision a comprehensive 
+              waste-to-value ecosystem that transforms multiple waste streams into valuable resources.
+            </p>
+            
+            <div class="vision-areas">
+              <div class="vision-area">
+                <div class="area-icon">🧵</div>
+                <div class="area-content">
+                  <h4>Textile Innovation</h4>
+                  <p>Advanced fiber recycling technologies and product development</p>
+                </div>
+              </div>
+              
+              <div class="vision-area">
+                <div class="area-icon">🛢️</div>
+                <div class="area-content">
+                  <h4>Biomass to Biofuel</h4>
+                  <p>Converting waste cooking oil and biomass into sustainable biofuels</p>
+                </div>
+              </div>
+              
+              <div class="vision-area">
+                <div class="area-icon">♻️</div>
+                <div class="area-content">
+                  <h4>Plastic Repurposing</h4>
+                  <p>Innovative upcycling and repurposing of various plastic waste streams</p>
+                </div>
+              </div>
+              
+              <div class="vision-area">
+                <div class="area-icon">🌱</div>
+                <div class="area-content">
+                  <h4>Circular Economy</h4>
+                  <p>Building integrated systems where waste becomes input for new processes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   
   <!-- CTA Section -->

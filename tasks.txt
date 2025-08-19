@@ -132,9 +132,64 @@
 
 - there is a lot of gap between the quick links and the contact information section on the footer of the website. remove that gap and make it look consistant with the rest of the footer. Also go through the rules.md once you complete the tasks assigned to you.  
 
-remove both these buttons and the code related to them from the homepage of the website: Learn Our Story Discover our mission Partner With Us Start your project. Also go through the rules.md once you complete the tasks assigned to you.
+- remove both these buttons and the code related to them from the homepage of the website: Learn Our Story Discover our mission Partner With Us Start your project. Also go through the rules.md once you complete the tasks assigned to you.
 
-on the homepage of the website, add these stats: 500kg Daily Processing 12.5T Monthly Output 0% Waste to Landfill, after the our solutions section and it should look like they are on band by changing their background. Also go through the rules.md once you complete the tasks assigned to you. 
+- on the homepage of the website, add these stats: 500kg Daily Processing 12.5T Monthly Output 0% Waste to Landfill, after the our solutions section and it should look like they are on band by changing their background. Also go through the rules.md once you complete the tasks assigned to you. 
 
 - the current cta section is looking very bad, change its css to have a light background with green text and all that stuff. It should look professional and modern and should be good looking. Also go through the rules.md once you complete the tasks assigned to you.
 
+- This section on the homepage is too much on the face, make it look professional and modern and should blend properly in the website. reduce the font size a bit also. 500 kg Daily Processing 12.5 T Monthly Output 0 % Waste to Landfill. Also go through the rules.md once you complete the tasks assigned to you.
+
+- the cta section should be right above the footer of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- there are only 3 sections on teh fototer of teh website but the gap between teh seconds section nad the third section is a lot. reduce this gap between the quick links nad the contact information section. Also go through the rules.md once you complete the tasks assigned to you.
+
+- remove this section from right above the footer of the homepage of the website: 500kg Daily Processing 12.5T Monthly Output 0% Waste to Landfill. Also go through the rules.md once you complete the tasks assigned to you.
+
+- remove the box around the stats in the ribbon section of the homepage of the website. Also go through the rules.md once you complete the tasks assigned to you. 
+
+- also remove the upper border around the stats in the ribbon section of the homepage of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- now lets focus on the section having this heading: Designing a cleaner, greener tomorrow. Improve the css of this section. it should look both modern and professional. Also go through the rules.md once you complete the tasks assigned to you.
+
+- the cta section should look same on each and every page of the website. currenly, the cta on the homepage is different from that on hte every page of hte website. fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- remove the bottom border from the heading of the Designing a cleaner, greener tomorrow, Also make the heading look better. Also go through the rules.md once you complete the tasks assigned to you.
+
+- the bottom of the hero section should be white so that it blends with the next section. Make the bottom of the hero section blurr. Also go through the rules.md once you complete the tasks assigned to you.
+
+- the css of the cards on the section having the heading: Designing a Cleaner and Greener tomorrow. like the cards look good but the text inside them looks a bit weird. Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- the blurr that we have on at the bottom of the hero section of the homepage of the website should be improved. It is currenly overlaping the content of hte hero section. make the blurr thing very short. It should look more modern and professional. Also go through the rules.md once you complete the tasks assigned to you.
+
+- the footer links upon hovering should shift a bit towards right. Also go through the rules.md once you complete the tasks assigned to you.
+
+- the page elements, css wise should load smoothly and very fast, if i scroll the page fast, i should n't see them loading late. Fix this thing for the homepage. Also go through the rules.md once you complete the tasks assigned to you.   
+
+- Also the heading, Every Waste Has Value Potential loads slowly when i load the page, it should already be loaded. Also go through the rules.md once you complete the tasks assigned to you.     
+
+- now, by using the same css and ui/ux that the homepage has, lets make the about page of the website. Files that you should use: about.html, about.css, about.js. and also for the informatoin on the about us page, look for zerowastegujarat.instructions.md . Also go through the rules.md once you complete the tasks assigned to you.
+
+- the footer and the cta section on the about us page looks different form the footer and the cta on the homepage. Make sure that both of them looks the same. Also go through the rules.md once you complete the tasks assigned to you.
+
+- in about us page, the cta doesn't even have any css and the footer's contact information section is looking different from the one on the homepage. fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- remove the get in touch section from the about us page the code related to it. Also go through the rules.md once you complete the tasks assigned to you.
+
+- now, by using the same css and ui/ux that the homepage has, lets make the services page of the website. Files that you should use: services.html, services.css, services.js. and also for the informatoin on the services page, look for zerowastegujarat.instructions.md . Also go through the rules.md once you complete the tasks assigned to you.
+
+- now, by using the same css and ui/ux that the homepage has, lets make the products page of the website. Files that you should use: products.html, products.css, products.js. and also for the informatoin on the products page, look for zerowastegujarat.instructions.md . Also go through the rules.md once you complete the tasks assigned to you.
+
+- now, by using the same css and ui/ux that the homepage has, lets make the sustainability page of the website. Files that you should use: sustainability.html, sustainability.css, sustainability.js. and also for the informatoin on the sustainability page, look for zerowastegujarat.instructions.md . Also go through the rules.md once you complete the tasks assigned to you.
+
+- now, by using the same css and ui/ux that the homepage has, lets make the partnerships page of the website. Files that you should use: partnerships.html, partnerships.css, partnerships.js. and also for the informatoin on the partnerships page, look for zerowastegujarat.instructions.md . Also go through the rules.md once you complete the tasks assigned to you.
+
+- the overall css of the partnerships page deons't match the ui/ux fo the website at all. deltet the tenitre css page of hte partnerships page and then get inspiredc by the css fo the homepage and the abous us page and read the zerowastegujarat.instructions.md and then create a new css page for the partnerships page. Also go through the rules.md once you complete the tasks assigned to you.
+
+- the overall css of the sustainability page deons't match the ui/ux fo the website at all. deltet the tenitre css page of hte sustainability page and then get inspiredc by the css fo the homepage and the abous us page and read the zerowastegujarat.instructions.md and then create a new css page for the sustainability page. Also go through the rules.md once you complete the tasks assigned to you.
+
+- remove this green glow thing on the partnerships page which appears when hovering over elements. Also go through the css file and remove any box-shadow or filter properties that create this effect.
+
+center align the content on the quick links nad the contact information section on the footer of the hoempage. Also go through the rules.md once you complete the tasks assigned to you.
+
+add mailto, whereever this email is mentioned. Also go through the rules.md once you complete the tasks assigned to you.    

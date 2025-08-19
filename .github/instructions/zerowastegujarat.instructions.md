@@ -315,6 +315,24 @@ Areas of interest
     2. Other products like waste cooking oil and other things such as bio oil
     3. Bio mass to bio derivates and bio ethanol 
     4. Such as upcucle of waste plastic 
-    5. Repurposing of waste palctcis
+    5. Repurposing of waste plastics
+
+### Mission
 
 Mission and vision statement related to it only 
+textile is one initiative 
+rest included biomass(waste cooking oil) to bio fuel 
+repurposing of plastics
+and more such things
+so our starting vision is limited to textile but we are future vision is to expand the scope to include other materials and processes as well. 
+
+
+
+
+
+
+
+
+
+
+

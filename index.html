@@ -18,15 +18,67 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Critical CSS for immediate loading -->
+  <style>
+    /* Critical CSS for preventing layout shifts */
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+    }
+    
+    /* Prevent flash of unstyled content - load immediately */
+    .hero, .services-overview, .stats-section, .about-preview {
+      opacity: 1;
+    }
+    
+    /* Ensure all headings load immediately */
+    .hero h1, .hero .title-highlight, .hero .title-main,
+    .about-preview h2, .stats h2, .services-overview h2,
+    h1, h2, h3, h4, h5, h6 {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    
+    /* Critical layout CSS */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* GPU acceleration for animations */
+    .feature, .stat-item, .service-card, .navbar-link {
+      transform: translateZ(0);
+      will-change: transform;
+    }
+  </style>
+  
   <!-- Shared Component CSS -->
   <link rel="stylesheet" href="./css/navbar.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/scroll-to-top.css">
+  <link rel="stylesheet" href="./css/enhanced-cta.css">
   
   <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="./css/performance.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/hero.css">
   <link rel="stylesheet" href="./css/services-overview.css">
+  <link rel="stylesheet" href="./css/stats.css">
   <link rel="stylesheet" href="./css/about-preview.css">
 </head>
 <body>
@@ -144,70 +196,53 @@
       </div>
     </section>
 
-    <!-- CTA Container -->
-    <div id="cta-container"></div>
+    <!-- Statistics Section -->
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" data-target="500">0</div>
+            <div class="stat-unit">kg</div>
+            <div class="stat-label">Daily Processing</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="12.5">0</div>
+            <div class="stat-unit">T</div>
+            <div class="stat-label">Monthly Output</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="0">0</div>
+            <div class="stat-unit">%</div>
+            <div class="stat-label">Waste to Landfill</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- About Preview -->
     <section class="about-preview" id="about">
       <div class="container">
         <div class="about-content">
           <div class="about-text">
-            <h2>Designing a cleaner, greener tomorrow</h2>
+            <h2>Designing a Cleaner and <br>
+              Greener tomorrow</h2>
             <p>Located in our 2,000 sq ft facility in Ahmedabad's industrial area, Zero Waste Gujarat processes 500kg of textile waste daily, ensuring zero waste reaches landfills.</p>
             <div class="about-features">
               <div class="feature">
-                <h4>🎯 Zero Waste Commitment</h4>
+                <h4>Zero Waste Commitment</h4>
                 <p>Complete diversion of textile waste from landfills</p>
               </div>
               <div class="feature">
-                <h4>🏭 Local Impact</h4>
+                <h4>Local Impact</h4>
                 <p>Creating jobs and environmental benefits in Gujarat</p>
               </div>
               <div class="feature">
-                <h4>🔬 Innovative Products</h4>
+                <h4>Innovative Products</h4>
                 <p>Recycled fiber, sustainable packaging, and nonwovens</p>
               </div>
               <div class="feature">
-                <h4>🌍 Climate Action</h4>
+                <h4>Climate Action</h4>
                 <p>Generating verified carbon credits for global impact</p>
-              </div>
-            </div>
-            <!-- Enhanced CTA Section -->
-            <div class="about-cta">
-              <div class="cta-buttons">
-                <button class="btn-primary-large cta-primary" onclick="window.location.href='./about.html'">
-                  <div class="btn-content">
-                    <span class="btn-text">Learn Our Story</span>
-                    <span class="btn-subtext">Discover our mission</span>
-                  </div>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </button>
-                <button class="btn-secondary-outline cta-secondary" onclick="window.location.href='./contact.html'">
-                  <div class="btn-content">
-                    <span class="btn-text">Partner With Us</span>
-                    <span class="btn-subtext">Start your project</span>
-                  </div>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M12.5 7a4 4 0 11-8 0 4 4 0 018 0zM16 3.13a4 4 0 010 7.75"/>
-                  </svg>
-                </button>
-              </div>
-              <!-- Value Proposition / Key Metrics -->
-              <div class="value-props">
-                <div class="value-item">
-                  <span class="value-number">500<span>kg</span></span>
-                  <span class="value-text">Daily Processing</span>
-                </div>
-                <div class="value-item">
-                  <span class="value-number">12.5<span>T</span></span>
-                  <span class="value-text">Monthly Output</span>
-                </div>
-                <div class="value-item">
-                  <span class="value-number">0<span>%</span></span>
-                  <span class="value-text">Waste to Landfill</span>
-                </div>
               </div>
             </div>
           </div>
@@ -217,6 +252,9 @@
 
 
   </main>
+
+  <!-- CTA Container -->
+  <div id="cta-container"></div>
 
   <!-- Footer Container -->
   <div id="footer-container">
@@ -235,6 +273,7 @@
   <script src="./js/scroll-to-top.js"></script>
   <script src="./js/hero.js"></script>
   <script src="./js/services-overview.js"></script>
+  <script src="./js/stats.js"></script>
   <script src="./js/about-preview.js"></script>
   <script src="./js/index.js"></script>
 </body>

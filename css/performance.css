@@ -1,0 +1,111 @@
+/* Performance Optimizations for Zero Waste Gujarat */
+
+/* CSS Containment for better performance */
+.hero {
+  contain: layout style paint;
+}
+
+.services-overview {
+  contain: layout style paint;
+}
+
+.stats-section {
+  contain: layout style paint;
+}
+
+.about-preview {
+  contain: layout style paint;
+}
+
+/* Optimize font loading - this enhances the Google Fonts loading */
+.hero, .services-overview, .stats-section, .about-preview {
+  font-display: swap;
+}
+
+/* Reduce reflows and repaints */
+* {
+  box-sizing: border-box;
+}
+
+/* Critical performance rules */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* GPU acceleration for all interactive elements */
+.navbar-link,
+.btn-primary-hero,
+.btn-secondary-hero,
+.service-card,
+.feature,
+.stat-item,
+.btn-primary-cta,
+.footer-nav a {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimize transitions */
+.navbar-link {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px) translateZ(0);
+}
+
+/* Prevent layout shifts during loading */
+[data-loaded="false"] {
+  visibility: hidden;
+}
+
+[data-loaded="true"] {
+  visibility: visible;
+}
+
+/* Optimize scroll performance */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize CTA section loading */
+.cta-section {
+  contain: layout style paint;
+}
+
+/* Critical loading optimization */
+.critical-section {
+  opacity: 1;
+  transform: none;
+}
+
+/* Lazy loading optimization */
+.lazy-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.lazy-section.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
