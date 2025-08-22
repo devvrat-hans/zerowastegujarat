@@ -141,7 +141,7 @@ class TemplateLoader {
     
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
-      if (href && !href.startsWith('http') && !href.startsWith('#')) {
+      if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
         // Update relative paths based on current location
         if (href.startsWith('../') && !window.location.pathname.includes('/')) {
           // Remove ../ if we're in root directory

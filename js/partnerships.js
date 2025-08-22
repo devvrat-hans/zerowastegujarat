@@ -68,45 +68,8 @@ function initializeTimelineAnimations() {
 
 // Enhanced card hover effects
 function initializeCardHoverEffects() {
-  const partnershipCards = document.querySelectorAll('.partnership-card');
-  const storyCards = document.querySelectorAll('.story-card');
-
-  [...partnershipCards, ...storyCards].forEach(card => {
-    let hoverTimeout;
-    
-    card.addEventListener('mouseenter', function() {
-      clearTimeout(hoverTimeout);
-      this.classList.add('card-hover-active');
-      
-      // Add ripple effect
-      const ripple = document.createElement('div');
-      ripple.className = 'card-ripple';
-      this.appendChild(ripple);
-      
-      setTimeout(() => {
-        if (ripple.parentNode) {
-          ripple.remove();
-        }
-      }, 600);
-    });
-
-    card.addEventListener('mouseleave', function() {
-      hoverTimeout = setTimeout(() => {
-        this.classList.remove('card-hover-active');
-      }, 100);
-    });
-
-    // Touch support for mobile
-    card.addEventListener('touchstart', function() {
-      this.classList.add('card-touch-active');
-    });
-
-    card.addEventListener('touchend', function() {
-      setTimeout(() => {
-        this.classList.remove('card-touch-active');
-      }, 300);
-    });
-  });
+  // Removed all hover effects to prevent green burst issues
+  // Cards will use pure CSS hover states only
 }
 
 // Animated counters for metrics and stats
@@ -327,9 +290,16 @@ function animatePartnershipCards() {
 function animateSuccessStories() {
   const stories = document.querySelectorAll('.story-card');
   stories.forEach((story, index) => {
+    // Set initial state
+    story.style.opacity = '0';
+    story.style.transform = 'translateY(20px)';
+    story.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    
+    // Animate to final state with shorter delay
     setTimeout(() => {
-      story.classList.add('story-animate-in');
-    }, index * 200);
+      story.style.opacity = '1';
+      story.style.transform = 'translateY(0)';
+    }, index * 100); // Reduced from 200ms to 100ms for faster animation
   });
 }
 

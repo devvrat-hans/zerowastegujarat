@@ -265,15 +265,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Parallax effect for hero section
-    const hero = document.querySelector('.sustainability-hero');
-    if (hero) {
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            if (scrolled < hero.offsetHeight) {
-                hero.style.transform = `translateY(${rate}px)`;
-            }
-        });
-    }
+    // Removed parallax effect for hero section to fix scrolling issue
 });

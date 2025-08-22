@@ -9,6 +9,7 @@
   --white: #FFFFFF;
   --gray-100: #f8f9fa;
   --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
   --transition: all 0.3s ease;
   --border-radius: 12px;
 }
@@ -53,23 +54,35 @@ body {
 
 /* Partnerships Hero Section */
 .partnerships-hero {
-  background: linear-gradient(135deg, var(--gray-100) 0%, var(--white) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(33, 95, 68, 0.1) 0%,
+    rgba(33, 95, 68, 0.08) 20%,
+    rgba(33, 95, 68, 0.05) 40%,
+    rgba(33, 95, 68, 0.02) 70%,
+    rgba(255, 255, 255, 1) 100%
+  );
   padding: 8rem 0 6rem;
   position: relative;
   overflow: hidden;
 }
 
-.partnerships-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 10% 20%, rgba(33, 95, 68, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 90% 80%, rgba(33, 95, 68, 0.02) 0%, transparent 50%);
-  z-index: 1;
+/* Remove the ::before pseudo-element that was creating gradient boxes */
+/* .partnerships-hero::before - REMOVED FOR SMOOTH BACKGROUND */
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-10px, -10px) rotate(0.5deg);
+  }
+  50% {
+    transform: translate(10px, -20px) rotate(-0.5deg);
+  }
+  75% {
+    transform: translate(-5px, 10px) rotate(0.25deg);
+  }
 }
 
 .partnerships-hero-content {
@@ -187,124 +200,95 @@ body {
 
 .types-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
   margin-top: 4rem;
 }
 
 .partnership-card {
   background: var(--white);
-  border-radius: var(--border-radius);
-  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  padding: 2rem;
   border: 1px solid var(--gray-200);
   transition: var(--transition);
   position: relative;
-  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  height: fit-content;
 }
 
 .partnership-card:hover {
-  transform: translateY(-8px);
-}
-
-.partnership-card.primary {
-  border: 2px solid var(--primary-color);
-  background: linear-gradient(135deg, var(--white) 0%, rgba(33, 95, 68, 0.02) 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  border-color: rgba(33, 95, 68, 0.3);
 }
 
 .card-header {
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.card-badge {
-  display: inline-block;
-  background: var(--secondary-color);
-  color: var(--primary-color);
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .card-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   display: block;
+  color: var(--primary-color);
 }
 
-.card-content h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-}
-
-.card-content > p {
-  color: var(--text-light);
-  line-height: 1.7;
-  margin-bottom: 2rem;
-}
-
-.partnership-benefits h4,
-.csr-programs h4,
-.distribution-types h4,
-.credit-standards h4,
-.target-industries h4 {
-  font-size: 1.1rem;
+.card-header h3 {
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--text-dark);
-  margin-bottom: 1rem;
+  margin: 0;
+  line-height: 1.3;
 }
 
-.benefit-list {
-  display: grid;
+.card-content {
+  text-align: left;
+}
+
+.card-content p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.key-points {
+  display: flex;
+  flex-direction: column;
   gap: 0.75rem;
-  margin-bottom: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.benefit-item {
+.key-points .point {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  color: var(--text-light);
-  font-size: 0.95rem;
+  padding-left: 1rem;
+  position: relative;
+  margin-bottom: 0;
+  list-style: none;
 }
 
-.benefit-icon {
-  font-size: 1.25rem;
-  min-width: 24px;
-  color: var(--primary-color);
+.key-points .point::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.target-industries {
-  margin-bottom: 2rem;
-}
+/* Remove complex partnership benefits styling - cards are now simpler */
 
-.industry-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.industry-tag {
-  background: rgba(33, 95, 68, 0.1);
-  color: var(--primary-color);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border: 1px solid rgba(33, 95, 68, 0.2);
-  transition: var(--transition);
-  cursor: pointer;
-}
-
-.industry-tag:hover {
-  background: rgba(33, 95, 68, 0.2);
-  transform: scale(1.05);
-}
+/* Removed unused complex styling - cards now use simple structure */
 
 .program-list {
   display: grid;
@@ -400,55 +384,7 @@ body {
   font-size: 0.9rem;
 }
 
-.partnership-details {
-  background: var(--gray-100);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  border: 1px solid var(--gray-200);
-}
-
-.detail-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--gray-200);
-}
-
-.detail-row:last-child {
-  border-bottom: none;
-}
-
-.detail-label {
-  color: var(--text-light);
-  font-weight: 500;
-}
-
-.detail-value {
-  color: var(--text-dark);
-  font-weight: 600;
-}
-
-.btn-partnership {
-  width: 100%;
-  background: var(--primary-color);
-  color: var(--white);
-  border: none;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
-}
-
-.btn-partnership:hover {
-  background: var(--primary-light);
-  transform: translateY(-2px);
-}
+/* Removed partnership-details and other complex styles - cards are now simplified */
 
 /* Partnership Process Section */
 .partnership-process {
@@ -599,11 +535,14 @@ body {
   border-radius: var(--border-radius);
   padding: 2rem;
   border: 1px solid var(--gray-200);
-  transition: var(--transition);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.4s ease;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .story-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
 }
 
 .story-stats {
@@ -795,9 +734,10 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+@media (max-width: 968px) {
   .types-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
     max-width: 600px;
     margin: 4rem auto 0;
   }

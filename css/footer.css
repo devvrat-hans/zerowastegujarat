@@ -16,7 +16,7 @@
 .footer-main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  gap: 2.5rem;
   padding: 3rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -68,6 +68,15 @@
 }
 
 /* Footer Sections */
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-align: left;
+}
+
 .footer-section h4 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -83,6 +92,11 @@
 }
 
 /* Quick Links */
+.footer-links {
+  text-align: left;
+  padding: 0 6rem;
+}
+
 .footer-nav {
   list-style: none;
   padding: 0;
@@ -112,6 +126,7 @@
 /* Contact Information */
 .footer-contact {
   background-color: #215f44 !important;
+  text-align: left;
 }
 
 .contact-info {
@@ -125,6 +140,7 @@
   margin-bottom: 1rem;
   gap: 0.25rem;
   background-color: #215f44;
+  align-items: flex-start;
 }
 
 .contact-label {
@@ -144,15 +160,29 @@
   background-color: transparent;
 }
 
+.contact-value a {
+  color: #fff6ea;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-value a:hover {
+  color: #ffffff;
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /* Social Media */
 .social-media {
   margin-top: 1.5rem;
+  text-align: left;
 }
 
 .social-links {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  justify-content: flex-start;
 }
 
 .social-links a {

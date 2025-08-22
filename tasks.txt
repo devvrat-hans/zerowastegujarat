@@ -190,6 +190,59 @@
 
 - remove this green glow thing on the partnerships page which appears when hovering over elements. Also go through the css file and remove any box-shadow or filter properties that create this effect.
 
-center align the content on the quick links nad the contact information section on the footer of the hoempage. Also go through the rules.md once you complete the tasks assigned to you.
+- center align the content on the quick links nad the contact information section on the footer of the hoempage. Also go through the rules.md once you complete the tasks assigned to you.
 
-add mailto, whereever this email is mentioned. Also go through the rules.md once you complete the tasks assigned to you.    
+- add mailto, whereever this email is mentioned: ravedhamecha@gmail.com. Also go through the rules.md once you complete the tasks assigned to you.    
+
+- Now make the contact us page of the website having the contact us form. The webpage should be consistent with the UI/UX of the website including the homepage of the website. It should have the same type of CSS styling as the other pages of the website. Just create the contact-form.js but don't write anything inside it. AAlso go through the rules.md once you complete the tasks assigned to you.
+
+- Why Choose Our Products? section on the products page still doesn't have any css. Make sure proper css gets applied to this section of the products page of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- The hero sections of the products, sustainability and the contact us pages look a bit different from teh redst of the pages ofhte website,, make sure taht they look the same as that of hte other pageso fhte website like the homagepage and the about us page. Also go through the rules.md once you complete the tasks assigned to you. 
+
+- The partnerships opportunities section, in teh key benefits section is not looing good. make it look professional and modern. Also go through the rules.md once you complete the tasks assigned to you.     
+
+- in the products page, i also need a grey box aroudn the catgeory two section as we have around the category one section.    
+
+- in teh partnerships page, the cards should be two in a row and they look too fancy now. Make them look professionall and simeple and mordern at the same time. Also go through the rules.md once you complete the tasks assigned to you.
+
+- remove the bottom border from this heading on the prodcuts page. Also go through the rules.md once you complete the tasks assigned to you.
+
+- under Why Choose Our Products?, the cards upon hovering should have the same css as that of the cards on the homepage of the website . Also go through the rules.md once you complete the tasks assigned to you.    
+
+- in the partnerships page, reduce the content from the cards on under the partnerships opportunities heading. make the cards as small as possible and then keep their css simple and modern and professional. Also go through the rules.md once you complete the tasks assigned to you.
+
+- under the Our Future Vision heading, add two more cards so that we can have 6 cards in total. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Make the text on the footer left aligned. Also go through the rules.md once you complete the tasks assigned to you.
+
+- improve the css of the cards in the partnerships page. and also remove the learn more thing on the cards. They should look modern and professional. Also go through the rules.md once you complete the tasks assigned to you.
+
+- increase the padding on the quick links column on the footer between the columns on the footer of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- remove the appearing of the green burst in the middle of the cards upon hovering on the partnerships page. Also go through the rules.md once you complete the tasks assigned to you.    
+
+- The process steps that we have on the our services page of the website, can we have them have the same css as that of the partnerships page. Do that for me. Also go through the rules.md once you complete the tasks assigned to you.      
+
+- When i scroll over the sustainability page, the hero section scrolls up faster than the i scroll down the page. Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.        
+
+- On the partnerships page, when i hover upon the cards under the Partnership Opportunities and the Partnership Success Stories heading, a green color burst happens in the middle of the card which looks very bad. remove this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- remove the importance given to the first card on the partnerships page of the website. for example the b2b manufacturing card that we have has an extra black border. Remove this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- The cards under the Partnership Opportunities, bullet points have two bullet points appearing before every point, fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you. Also go through the rules.md once you complete the tasks assigned to you.
+
+- remove these two buttons and the code related to them from the our services page of the website: Schedule a Facility Tour Learn About Our Mission
+
+- on the contact us page of the website, the content is not visible on the contact us page, fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- when i click on the email on the footer of the website, it takes me to the http://127.0.0.1:3000/mailto:ravedhamecha@gmail.com. Fix this thing for me, it should open gmail instead. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Under this heading: Partnership Success Stories, the cards appear on the face and load suddenly. Fix this thing for me. and make them appear smooth and fast. Also go through the rules.md once you complete the tasks assigned to you.
+
+- make the background fo the hero section of all the pages of the website look better. Also go through the rules.md once you complete the tasks assigned to you.      
+
+On the contact page of the website. I am only able to see the cta and the footer of the website. I am not able to see the contact us form. Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- i want to have the hero section of the all pages of the website same. so make a hero.css and add it to all the pages of the website and delete teh current hero realted styels that the pages have. Also go through the rules.md once you complete the tasks assigned to you.   
+
