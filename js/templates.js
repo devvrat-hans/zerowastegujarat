@@ -44,7 +44,7 @@ class TemplateLoader {
   // Load individual template
   async loadTemplate(templateName, containerId) {
     try {
-      const templatePath = `${this.basePath}tempaltes/shared/${templateName}.html`;
+      const templatePath = `${this.basePath}templates/shared/${templateName}.html`;
       const response = await fetch(templatePath);
       
       if (!response.ok) {
@@ -73,10 +73,13 @@ class TemplateLoader {
       container.innerHTML = content;
       container.classList.add(`${templateName}-loaded`);
     } else {
-      // If no container found, append to body for navbar or before closing body tag for footer
+      // If no container found, append to body for specific templates
       if (templateName === 'navbar') {
         document.body.insertAdjacentHTML('afterbegin', content);
       } else if (templateName === 'footer') {
+        document.body.insertAdjacentHTML('beforeend', content);
+      } else if (templateName === 'chatbot') {
+        // Append chatbot to body (it's a fixed position widget)
         document.body.insertAdjacentHTML('beforeend', content);
       }
     }
@@ -102,7 +105,7 @@ class TemplateLoader {
     const stylesheets = [
       { href: `${this.basePath}css/navbar.css`, id: 'navbar-css' },
       { href: `${this.basePath}css/footer.css`, id: 'footer-css' },
-      { href: `${this.basePath}css/enhanced-cta.css`, id: 'enhanced-cta-css' }
+      { href: `${this.basePath}css/cta.css`, id: 'cta-css' }
     ];
     
     stylesheets.forEach(stylesheet => {
@@ -124,6 +127,7 @@ class TemplateLoader {
       { src: `${this.basePath}js/cta.js`, id: 'cta-js' }
     ];
     
+    // Load regular scripts
     scripts.forEach(script => {
       if (!document.getElementById(script.id)) {
         const scriptElement = document.createElement('script');

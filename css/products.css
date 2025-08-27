@@ -166,10 +166,14 @@ body {
 }
 
 .categories-header h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .categories-header p {
@@ -424,10 +428,14 @@ body {
 }
 
 .quality-header h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .quality-header p {
@@ -496,10 +504,14 @@ body {
 }
 
 .applications-header h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .applications-header p {
@@ -613,10 +625,14 @@ body {
 }
 
 .benefits-header h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .benefits-header p {
@@ -673,26 +689,9 @@ body {
 }
 
 .benefit-icon {
-  width: 90px;
-  height: 90px;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-  color: var(--white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  margin: 0 auto 2rem;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 1;
-  filter: grayscale(20%);
-}
-
-.benefit-card:hover .benefit-icon {
-  filter: grayscale(0%);
-  transform: scale(1.1);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .benefit-card h4 {
@@ -728,10 +727,14 @@ body {
 }
 
 .process-header h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .process-header p {
@@ -1036,9 +1039,7 @@ body {
   }
   
   .benefit-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .step-number {
@@ -1049,5 +1050,56 @@ body {
   
   .process-arrow {
     font-size: 1.2rem;
+  }
+}
+
+/* Verification Standards Styling */
+.category-certifications {
+  margin: 2rem 0;
+}
+
+.category-certifications h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.cert-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.cert-badge {
+  background: var(--white);
+  color: var(--text-dark);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(33, 95, 68, 0.1);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+  position: relative;
+}
+
+.cert-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(33, 95, 68, 0.15);
+  border-color: var(--primary-color);
+}
+
+/* Remove special styling for individual badges - keep them consistent */
+
+@media (max-width: 768px) {
+  .cert-badges {
+    gap: 0.5rem;
+  }
+  
+  .cert-badge {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
   }
 }

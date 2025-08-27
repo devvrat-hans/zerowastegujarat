@@ -20,6 +20,7 @@
   z-index: 1000;
   transition: var(--transition);
   height: var(--navbar-height);
+  transform: translateY(0) !important;
 }
 
 .navbar.scrolled {
@@ -358,7 +359,23 @@
   box-shadow: 0 0 0 2px rgba(33, 95, 68, 0.3);
 }
 
-/* Smooth page transition preparation */
+/* Ensure body has proper spacing for fixed navbar */
 body {
-  padding-top: var(--navbar-height);
+  padding-top: var(--navbar-height) !important;
+}
+
+/* Alternative approach for main content sections */
+main {
+  padding-top: 0;
+}
+
+/* Ensure first sections don't have overlapping margins */
+.hero,
+.about-hero,
+.services-hero,
+.products-hero,
+.partnerships-hero,
+.contact-hero,
+.sustainability-hero {
+  margin-top: 0;
 }

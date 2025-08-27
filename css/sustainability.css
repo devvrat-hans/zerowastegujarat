@@ -172,10 +172,14 @@ body {
 }
 
 .impact-header h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .impact-header p {
@@ -312,10 +316,14 @@ body {
 }
 
 .economy-header h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .economy-header p {
@@ -455,10 +463,14 @@ body {
 }
 
 .certifications-header h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .certifications-header p {
@@ -544,10 +556,14 @@ body {
 }
 
 .lca-header h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .lca-header p {
@@ -756,10 +772,14 @@ body {
 }
 
 .goals-header h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .goals-header p {

@@ -2,12 +2,31 @@
 
 class Navbar {
   constructor() {
-    this.navbar = document.getElementById('navbar');
-    this.mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    this.navbarNav = document.getElementById('navbarNav');
-    this.navbarLinks = document.querySelectorAll('.navbar-link');
-    
-    this.init();
+    // Wait for elements to be available
+    this.initWhenReady();
+  }
+
+  initWhenReady() {
+    const waitForElements = () => {
+      this.navbar = document.getElementById('navbar');
+      this.mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      this.navbarNav = document.getElementById('navbarNav');
+      this.navbarLinks = document.querySelectorAll('.navbar-link');
+
+      if (this.navbar && this.navbarNav) {
+        console.log('Navbar elements found, initializing...');
+        this.init();
+      } else {
+        console.log('Navbar elements not ready, retrying...');
+        setTimeout(waitForElements, 100);
+      }
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', waitForElements);
+    } else {
+      waitForElements();
+    }
   }
 
   init() {
@@ -71,6 +90,8 @@ class Navbar {
 
   // Close mobile menu
   closeMobileMenu() {
+    if (!this.navbarNav || !this.mobileMenuToggle) return;
+    
     this.navbarNav.classList.remove('active');
     this.mobileMenuToggle.classList.remove('active');
     document.body.style.overflow = ''; // Restore body scroll
@@ -98,6 +119,8 @@ class Navbar {
 
   // Handle window resize
   handleResize() {
+    if (!this.navbarNav) return;
+    
     const windowWidth = window.innerWidth;
     
     // Close mobile menu if window becomes larger
@@ -108,6 +131,9 @@ class Navbar {
 
   // Handle clicks outside mobile menu
   handleOutsideClick(e) {
+    // Check if elements exist before accessing their properties
+    if (!this.navbarNav || !this.navbar) return;
+    
     if (!this.navbarNav.classList.contains('active')) return;
     
     // Close if clicking outside navbar
@@ -304,7 +330,8 @@ const NavbarUtils = {
 // Initialize navbar when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = new Navbar();
-  const scrollController = new NavbarScrollController(navbar);
+  // Disable auto-hide behavior to keep navbar always visible
+  // const scrollController = new NavbarScrollController(navbar);
   
   // Make navbar instance globally available
   window.ZeroWasteNavbar = navbar;

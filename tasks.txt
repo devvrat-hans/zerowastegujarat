@@ -32,7 +32,7 @@
 
 - the contact us and the contact should redirect to the same contact us page, keep only one of them.
 
-- the scroll to top should also be there as a template and should be added to all the pages of hte website as a tempalte. for that make separate html css and js fiels for it nad load it on all the pages using hte tempaltes.js.
+- the scroll to top should also be there as a template and should be added to all the pages of hte website as a tempalte. for that make separate html css and js fiels for it nad load it on all the pages using hte templates.js.
 
 - In the navbar when click on the tab, a box appears around it for a second and then disappears. it should not happen, remove this functionality.
 
@@ -92,7 +92,7 @@
 
 - the hero section of the website doesn't look good at all, there is a lot of unecesary contetn on the hero section of the homeapge of hte website. and the hero section should be such that it contains the only two columns, image on the right hand side and the text nad other things on the left hadn side.
 
-- the cta that we ahve after the our solutions section which starts with teh Ready to Start Your Sustainability Journey?, should be in teh cta section of all the pages of the website wihcih is just above the footer. create a new cta template and add ti to the tempaltes shared fodler and this should load using hte templates.js file on all the pages of the website.
+- the cta that we ahve after the our solutions section which starts with teh Ready to Start Your Sustainability Journey?, should be in teh cta section of all the pages of the website wihcih is just above the footer. create a new cta template and add ti to the templates shared fodler and this should load using hte templates.js file on all the pages of the website.
 
 - remove any background that the image that we have on the hero section of the homepage of the website. Also go through rules.md once you complete the tasks assinged to you.
 
@@ -242,7 +242,104 @@
 
 - make the background fo the hero section of all the pages of the website look better. Also go through the rules.md once you complete the tasks assigned to you.      
 
-On the contact page of the website. I am only able to see the cta and the footer of the website. I am not able to see the contact us form. Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+- On the contact page of the website. I am only able to see the cta and the footer of the website. I am not able to see the contact us form. Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
 
 - i want to have the hero section of the all pages of the website same. so make a hero.css and add it to all the pages of the website and delete teh current hero realted styels that the pages have. Also go through the rules.md once you complete the tasks assigned to you.   
 
+- now i wnat to create a chatbot having some preset questions and answers to those questions. The first page of the chatbot should contain the categories of the questions followed by a set of questions and the last question in each category should be that if you didn't find your questions and then give them the contact information along with the contact form on the contact us page link. The chatbot should be present on all the pages of the website. The files that you should create are: chatbot.html, chatbot.css, chatbot.js. Add these files to the templates/shared folder and load them using the templates.js file on all the pages of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- The chatbot is not opening upon clicking on the chatbot widget. Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.      
+
+- when i click on the chatbot widget on the homepage, it is not opening. Don't change the directory structure in the workspace. Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- increase the size of the chatbot widget and keep the background of the chatbot widget as white. Also go through the rules.md once you complete the tasks assigned to you.
+
+- chatbot is still not openeing upon clicking on the chatbot widget. Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you. 
+
+- getting this error upon clicking on teh chatbot widget and the chatbot widget is not openinig: Uncaught TypeError: Cannot read properties of null (reading 'classList') at Navbar.handleOutsideClick (VM2420 navbar.js:111:25) at HTMLDocument.<anonymous> (VM2420 navbar.js:25:52) handleOutsideClick @ VM2420 navbar.js:111 (anonymous) @ VM2420 navbar.js:25Understand this error Also go through the rules.md once you complete the tasks assigned to you.   
+
+- Fix this error comoing in the console and the chatbot window is still not opening upon clicking on the chatbot widget: templates.js:119  GET http://127.0.0.1:3000/templates/shared/chatbot.css net::ERR_ABORTED 404 (Not Found). Fix this thing for me. Also go throught the rules.md once you complete the tasks assigned to you. 
+
+- remove the chatbot form the website and the entire code related to it. Also go through the rules.md once you complete the tasks assigned to you.
+
+- based on the content given in the home-page.txt, i want you to replace the content on the homepage of the website with that given on the home-page.txt file. Make sure that the content looks professional and modern. Don't change the css and js, only change the content of the website. If there is some additional content in the website's page that is not there in the txt file, then keep that content if it aligns with the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- give proper css to the "current operations" section and the "Founded on Expertise, Built for Impact" section on the about us page of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Add proper image/emoji to the Value-Added Products card of the Our Future Vision section as we have for the other cards in the same section of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- based on the content given in the about-page.txt, i want you to replace the content on the homepage of the website with that given on the home-page.txt file. Make sure that the content looks professional and modern. Don't change the css and js, only change the content of the website. If there is some additional content in the website's page that is not there in the txt file, then keep that content if it aligns with the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- based on the content given in the services-page.txt, i want you to replace the content on the homepage of the website with that given on the home-page.txt file. Make sure that the content looks professional and modern. Don't change the css and js, only change the content of the website. If there is some additional content in the website's page that is not there in the txt file, then keep that content if it aligns with the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- give proper css to the Location: 2,000 sq ft facility in Ahmedabad Industrial Area. Technology: German Trutzschler carding systems, Korean needle-punch lines, Indian-manufactured support equipment. Team: 8 skilled operators, 1 quality controller, 1 operations manager. Certifications: ISO 9001 (pending), FSSAI for food-contact products. content under the Our State-of-the-Art Facility heading under on the our services page of the website. Also go through the rules.md once you complete the tasks assigned to you.  
+
+- under this heading "Collection Sources" on the services page, can we have all the four cards in the same horizontal line. Make this for me. Also go through the rules.md once you complete the tasks assigned to you.       
+
+- under this heading "Our State-of-the-Art Facility" on the services page, can we have all the four cards in the same horizontal line. Make this for me. Also go through the rules.md once you complete the tasks assigned to you.       
+
+- based on the content given in the products-page.txt, i want you to replace the content on the homepage of the website with that given on the home-page.txt file. Make sure that the content looks professional and modern. Don't change the css and js, only change the content of the website. If there is some additional content in the website's page that is not there in the txt file, then keep that content if it aligns with the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- based on the content given in the sustainability-page.txt, i want you to replace the content on the homepage of the website with that given on the home-page.txt file. Make sure that the content looks professional and modern. Don't change the css and js, only change the content of the website. If there is some additional content in the website's page that is not there in the txt file, then keep that content if it aligns with the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- based on the content given in the partnerships-page.txt, i want you to replace the content on the homepage of the website with that given on the home-page.txt file. Make sure that the content looks professional and modern. Don't change the css and js, only change the content of the website. If there is some additional content in the website's page that is not there in the txt file, then keep that content if it aligns with the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- based on the content given in the contact-page.txt, i want you to replace the content on the homepage of the website with that given on the home-page.txt file. Make sure that the content looks professional and modern. Don't change the css and js, only change the content of the website. If there is some additional content in the website's page that is not there in the txt file, then keep that content if it aligns with the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- based on the content given in the contact.txt, i want you to replace and add the content the content on the contact us page of the website with that given on the contact.txt file. Make sure that the content looks professional and modern. Don't change the css and js, only change the content of the website. If there is some additional content in the website's page that is not there in the txt file, then keep that content if it aligns with the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- The conclusion.txt contains a single line which is the conclusion. Add it to the website wherever it should and make sure that it is properly highlighted. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Under Our State-of-the-Art Facility heading on teh services page, keep the cards css simple and professional, don't make it too much fancy and it should go along with the css of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Improve the css of the cards in this section of the services page: Our State-of-the-Art Facility. Keep it simple professional and modern. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Can we omit changing of the colors of the iamges section/emoji section in the cards of the our reccycling porcess heading in teh services page of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Keep the navbar fixed on the top of the page. Also go through the rules.md once you complete the tasks assigned to you. 
+
+- currenly, when i scroll down, the navbar scrolls up and disappears. It should be fixed on the top of the page. Also go through the rules.md once you complete the tasks assigned to you.    
+
+- Point the learn more of the textile collection card on the homepage to Collection Sources section of the our services page. Also go through the rules.md once you complete the tasks assigned to you.   
+
+- Point the learn more of the Processing and Manufacturing card on the homeapge to Five-Step Transformation: From Waste to Worth section on the our services page of the website. Also go through the rules.md once you complete the tasks assigned to you.   
+
+- give proper css to this: Verification Standards: Verra (VCS) Gold Standard CDM Climate Action Reserve on the products page of the website. Also go through the rules.md once you complete the tasks assigned to you.  
+
+- give proper css to this: Verification Standards: Verra (VCS) Gold Standard CDM Climate Action Reserve on the products page of the website. Currenly it is lookign very cartoonish, it should look mordern, professional and simple. Also go through the rules.md once you complete the tasks assigned to you.  
+
+- give proper css to this: Verification Standards: txt on the products page of the website. Also go through the rules.md once you complete the tasks assigned to you. 
+
+- make this section on the prodcuts page simple and professional. Verification Standards:. Also go through the rules.md once you complete the tasks assigned to you.  
+
+- make this white colored: Verification Standards:. Also go through the rules.md once you complete the tasks assigned to you.
+
+- also improve the css of the Show More Features button on the prodcuts page so that it is visible on both the green and the white background. Also go through the rules.md once you complete the tasks assigned to you.
+
+- I am able to see that this section has proper css in the code but it is not visbile in the local host. FIx this thing for me. give proper css to the "current operations" section and the "Founded on Expertise, Built for Impact" section on the about us page of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Can we have the headings on the products page have the same css as that of the headings on the our services page of the website, do that for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Can we have the headings on the sustainability page have the same css as that of the headings on the our services page of the website, do that for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Can we have the headings on the contact us page have the same css as that of the headings on the our services page of the website, do that for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+The cta section is not uniform across all the pages of the website. The one on the homepage is differnet from the others and it shouldn't be. Make sure that there is not css for the cta of the website in the css files for the website pages. All the cta css and js should come from the cta.css and the cta.js
+
+- There are two buttons on the hero section of the homeapge, make them side by side and not one above the other. Also go through the rules.md once you complete the tasks assigned to you.    
+
+- The buttons on the hero section of the homepage are still appearing in vertically one above the other. It might be the case that the width of the container in which they are in is small to accomodate both. So increase the width of the container a little. Also go through the rules.md once you complete the tasks assigned to you.    
+
+- Remove that blurr thing that we have at the bottom of the hero section of the homepage of the website. Also go through the rules.md once you complete the tasks assigned to you.    
+
+Now, we need to add a chatbot to the website. based on the content on the website and the content peresent in the chatbot-knowledgebase.txt. The chatbot should have some predefined questions and answers to those questions. The first page of the chatbot should contain the categories of the questions followed by a set of questions and the last question in each category should be that if you didn't find your questions and then give them the contact information along with the contact form on the contact us page link. The chatbot should be present on all the pages of the website. The files that you should create are: chatbot.html in the templates/shared folder, chatbot.css in the css folder, chatbot.js in the css folder. Add these files to the templates/shared folder and load them using the templates.js file on all the pages of the website. The chatbot should be loaded to each and every page of the website via the templates.js. Also go through the rules.md once you complete the tasks assigned to you.
+
+- For the image section on the cards udner this heading, Why Choose Our Products? on the products page be like the image section on the cards under Our Recycling Process section on the our servies page. Also go through the rules.md once you complete the tasks assigned to you.          
+
+- Under this heading on the sustainability page: Circular Economy Model, can u make the things load faster as we scroll down in a flash. Also go through the rules.md once you complete the tasks assigned to you.    
+
+- In the cards in the partnership section: Partnership Success Stories, All the cards should have the same space for the content above the headings like Ahmedabad Garment Cluster, Premium Mattress Manufacturer and E-commerce Packaging Partner. Also go through the rules.md once you complete the tasks assigned to you. 
+
+- The cards under this heading: Partnership Opportunities should load fast and smoothly as we scroll down the page. Also go through the rules.md once you complete the tasks assigned to you. 
+
+- The modified content is not visible on the website of the contact us page. Like the content is there on the html but is not visible on the show preview thing. Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.

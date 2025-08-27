@@ -551,10 +551,16 @@ body {
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--gray-200);
+  min-height: 80px; /* Fixed minimum height for consistent spacing */
+  align-items: flex-end; /* Align items to bottom for consistent appearance */
 }
 
 .stat-item {
   text-align: center;
+  flex: 1; /* Equal width distribution */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to bottom */
 }
 
 .stat-number {

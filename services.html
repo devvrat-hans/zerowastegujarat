@@ -52,7 +52,7 @@
   <link rel="stylesheet" href="./css/navbar.css">
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/scroll-to-top.css">
-  <link rel="stylesheet" href="./css/enhanced-cta.css">
+  <link rel="stylesheet" href="./css/cta.css">
   
   <!-- Page-specific CSS -->
   <link rel="stylesheet" href="./css/performance.css">
@@ -79,9 +79,7 @@
           </h1>
           
           <p class="hero-description">
-            From collection to dispatch, we offer end-to-end textile recycling services 
-            that transform waste into valuable products. Our 5-step process ensures maximum 
-            resource recovery and zero waste to landfills.
+            Our proprietary process transforms diverse textile waste streams into market-ready products through controlled mechanical recycling, quality-assured processing, and sustainable manufacturing.
           </p>
           
           <div class="hero-metrics">
@@ -111,7 +109,7 @@
         </div>
         
         <div class="overview-content">
-          <div class="collection-sources">
+          <div class="collection-sources" id="collection-sources">
             <h3>Collection Sources</h3>
             <div class="sources-grid">
               <div class="source-card">
@@ -126,7 +124,7 @@
                   </svg>
                 </div>
                 <h4>Garment Factories</h4>
-                <p>Direct partnerships with manufacturing units for pre-consumer textile waste collection</p>
+                <p>Pre-consumer waste from Ahmedabad's textile corridor</p>
               </div>
               
               <div class="source-card">
@@ -137,7 +135,7 @@
                   </svg>
                 </div>
                 <h4>Rag Dealers</h4>
-                <p>Network of local dealers providing mixed textile waste from various sources</p>
+                <p>Post-consumer textiles through established networks</p>
               </div>
               
               <div class="source-card">
@@ -149,7 +147,19 @@
                   </svg>
                 </div>
                 <h4>Post-Consumer Partnerships</h4>
-                <p>Collaborative programs for collecting used clothing and household textiles</p>
+                <p>Direct collection from retail and hospitality sectors</p>
+              </div>
+              
+              <div class="source-card">
+                <div class="source-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                    <path d="M9 14l2 2 4-4"/>
+                  </svg>
+                </div>
+                <h4>CSR Initiatives</h4>
+                <p>Corporate waste management contracts</p>
               </div>
             </div>
           </div>
@@ -161,8 +171,8 @@
     <section class="process-steps">
       <div class="container">
         <div class="steps-header">
-          <h2>5-Step Transformation Process</h2>
-          <p>From raw waste to valuable products through our systematic approach</p>
+          <h2 id="five-step-transformation">Five-Step Transformation: <br> From Waste to Worth</h2>
+          <p>From raw waste to valuable products <br>through our systematic approach</p>
         </div>
         
         <div class="process-timeline">
@@ -175,9 +185,7 @@
               <div class="step-icon">🔍</div>
               <h4>Collection & Sorting</h4>
               <p>
-                Textile waste is collected from our partner sources and meticulously sorted by 
-                fiber type, color, and quality. This initial categorization ensures optimal 
-                processing efficiency and end-product quality.
+                Multi-stream waste collection using color-coding and fiber type identification. Advanced sorting separates cotton, polyester, blends, and contaminated materials. Quality control ensures only processable materials enter production.
               </p>
               <div class="step-features">
                 <span class="feature-tag">Quality Assessment</span>
@@ -196,9 +204,7 @@
               <div class="step-icon">⚙️</div>
               <h4>Shredding & Fiber Opening</h4>
               <p>
-                Sorted textiles undergo mechanical shredding to break down fabric structures. 
-                Our fiber opening machines separate individual fibers while maintaining their 
-                integrity for downstream processing.
+                Industrial shredders reduce textiles to manageable sizes while fiber opening machines separate and clean individual fibers. Contamination removal and length standardization prepare materials for downstream processing.
               </p>
               <div class="step-features">
                 <span class="feature-tag">Mechanical Processing</span>
@@ -217,9 +223,7 @@
               <div class="step-icon">🎯</div>
               <h4>Carding for Fiber Output</h4>
               <p>
-                The carding process aligns and blends fibers to create uniform, high-quality 
-                recycled fiber suitable for nonwoven applications and further processing into 
-                new textile products.
+                Carding machines align fibers, remove remaining impurities, and create consistent web formation. Output includes recycled staple fiber (1.5-15 dtex) suitable for nonwoven, stuffing, and industrial applications.
               </p>
               <div class="step-features">
                 <span class="feature-tag">Fiber Alignment</span>
@@ -238,9 +242,7 @@
               <div class="step-icon">📦</div>
               <h4>Pulping/Molding for Packaging</h4>
               <p>
-                Cotton fibers are processed into pulp for creating sustainable packaging solutions. 
-                Our molding technology produces eco-friendly alternatives to traditional packaging 
-                materials.
+                Cotton-rich streams undergo pulping for paper-based packaging products. Molded fiber tray production includes food-contact certification processing for FSSAI compliance.
               </p>
               <div class="step-features">
                 <span class="feature-tag">Eco Packaging</span>
@@ -258,9 +260,7 @@
               <div class="step-icon">🚚</div>
               <h4>Baling/Packing & Dispatch</h4>
               <p>
-                Final products are professionally packaged, baled for efficient transportation, 
-                and dispatched to customers. Our quality control ensures every shipment meets 
-                industry standards.
+                Final products undergo quality testing, proper packaging, and logistics coordination. Carbon credit documentation and customer delivery complete our value chain.
               </p>
               <div class="step-features">
                 <span class="feature-tag">Quality Control</span>
@@ -279,13 +279,45 @@
         <div class="facility-content">
           <div class="facility-text">
             <h2>Our State-of-the-Art Facility</h2>
-            <p class="facility-intro">
-              Located in Ahmedabad's thriving industrial area, our 2,000 square foot facility 
-              is equipped with cutting-edge machinery and staffed by experienced professionals 
-              dedicated to sustainable textile processing.
-            </p>
+            <br>
+  
+            <div class="facility-overview">
+              <div class="facility-specs">
+                <div class="spec-item location-spec">
+                  <div class="spec-icon">📍</div>
+                  <div class="spec-content">
+                    <h4>Location:</h4>
+                    <p>2,000 sq ft facility in Ahmedabad Industrial Area</p>
+                  </div>
+                </div>
+                
+                <div class="spec-item technology-spec">
+                  <div class="spec-icon">⚙️</div>
+                  <div class="spec-content">
+                    <h4>Technology:</h4>
+                    <p>German Trutzschler carding systems, Korean needle-punch lines, Indian-manufactured support equipment</p>
+                  </div>
+                </div>
+                
+                <div class="spec-item team-spec">
+                  <div class="spec-icon">👥</div>
+                  <div class="spec-content">
+                    <h4>Team:</h4>
+                    <p>8 skilled operators, 1 quality controller, 1 operations manager</p>
+                  </div>
+                </div>
+                
+                <div class="spec-item certifications-spec">
+                  <div class="spec-icon">🏆</div>
+                  <div class="spec-content">
+                    <h4>Certifications:</h4>
+                    <p>ISO 9001 (pending), FSSAI for food-contact products</p>
+                  </div>
+                </div>
+              </div>
+            </div>
             
-            <div class="facility-highlights">
+            <!-- <div class="facility-highlights">
               <div class="highlight-item">
                 <div class="highlight-icon">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -295,7 +327,7 @@
                 </div>
                 <div class="highlight-content">
                   <h4>Strategic Location</h4>
-                  <p>Ahmedabad industrial area with excellent connectivity and logistics support</p>
+                  <p>2,000 sq ft facility in Ahmedabad Industrial Area with excellent connectivity</p>
                 </div>
               </div>
               
@@ -308,7 +340,7 @@
                 </div>
                 <div class="highlight-content">
                   <h4>Advanced Equipment</h4>
-                  <p>Modern machinery ensuring efficient processing and consistent quality output</p>
+                  <p>German Trutzschler carding systems, Korean needle-punch lines, Indian support equipment</p>
                 </div>
               </div>
               
@@ -323,11 +355,11 @@
                 </div>
                 <div class="highlight-content">
                   <h4>Expert Team</h4>
-                  <p>Skilled professionals committed to delivering excellence in every process</p>
+                  <p>8 skilled operators, <br>1 quality controller, <br>1 operations manager</p>
                 </div>
               </div>
               
-              <!-- <div class="highlight-item">
+              <div class="highlight-item">
                 <div class="highlight-icon">
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
@@ -337,8 +369,11 @@
                   <h4>Environmental Compliance</h4>
                   <p>All operations meet environmental standards and sustainability requirements</p>
                 </div>
-              </div> -->
-            </div>
+              </div> 
+            </div> -->
+            <br>
+            <br>
+            <br>
             
             <div class="facility-cta">
               <a href="./contact.html" class="btn-primary">

@@ -51,18 +51,36 @@ document.addEventListener('DOMContentLoaded', function() {
             showMoreBtn.textContent = 'Show More Features';
             showMoreBtn.className = 'show-more-btn';
             showMoreBtn.style.cssText = `
-                background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-                color: white;
-                border: none;
+                background: #ffffff;
+                color: #215f44;
+                border: 2px solid #215f44;
                 padding: 0.5rem 1rem;
-                border-radius: 20px;
+                border-radius: 8px;
                 font-size: 0.875rem;
+                font-weight: 600;
                 cursor: pointer;
                 margin-top: 1rem;
                 transition: all 0.3s ease;
+                box-shadow: 0 2px 8px rgba(33, 95, 68, 0.1);
             `;
             
             let expanded = false;
+            
+            // Add hover effects
+            showMoreBtn.addEventListener('mouseenter', function() {
+                this.style.background = '#215f44';
+                this.style.color = '#ffffff';
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 4px 12px rgba(33, 95, 68, 0.2)';
+            });
+            
+            showMoreBtn.addEventListener('mouseleave', function() {
+                this.style.background = '#ffffff';
+                this.style.color = '#215f44';
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 2px 8px rgba(33, 95, 68, 0.1)';
+            });
+            
             showMoreBtn.addEventListener('click', function() {
                 expanded = !expanded;
                 items.forEach((item, index) => {

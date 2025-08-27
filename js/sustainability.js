@@ -159,9 +159,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             setTimeout(() => {
                                 arrows[index].style.opacity = '1';
                                 arrows[index].style.transform = 'scale(1)';
-                            }, 300);
+                            }, 50); // Reduced from 300ms to 50ms
                         }
-                    }, index * 400);
+                    }, index * 80); // Reduced from 400ms to 80ms for much faster loading
                 });
                 
                 observer.disconnect();
@@ -174,13 +174,13 @@ document.addEventListener('DOMContentLoaded', function() {
         cycleSteps.forEach(step => {
             step.style.opacity = '0';
             step.style.transform = 'translateY(20px) scale(0.8)';
-            step.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            step.style.transition = 'opacity 0.2s ease, transform 0.2s ease'; // Reduced from 0.6s to 0.2s
         });
         
         cycleArrows.forEach(arrow => {
             arrow.style.opacity = '0';
             arrow.style.transform = 'scale(0)';
-            arrow.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            arrow.style.transition = 'opacity 0.2s ease, transform 0.2s ease'; // Reduced from 0.6s to 0.2s
         });
         
         const cycleObserver = new IntersectionObserver(animateCycle, {

@@ -42,8 +42,13 @@ body {
 
 /* Ensure main content is visible */
 main {
-  min-height: 50vh;
-  width: 100%;
+  min-height: 50vh !important;
+  width: 100% !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 1 !important;
 }
 
 /* Contact Hero Section */
@@ -136,11 +141,14 @@ main {
 /* Contact Content Section */
 .contact-content {
   padding: 6rem 0;
-  background: var(--white);
-  width: 100%;
+  background: var(--white) !important;
+  width: 100% !important;
   min-height: 400px;
-  position: relative;
-  z-index: 1;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .contact-grid {
@@ -153,16 +161,24 @@ main {
 
 /* Contact Information */
 .contact-info-section {
-  display: block;
-  visibility: visible;
-  opacity: 1;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: var(--white) !important;
+  position: relative !important;
+  z-index: 10 !important;
+  min-height: 500px !important;
 }
 
 .contact-info-section h2 {
-  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: block;
   visibility: visible;
 }
@@ -175,20 +191,28 @@ main {
 }
 
 .contact-methods {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: 2rem;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 10 !important;
 }
 
 .contact-method {
-  display: flex;
+  display: flex !important;
   align-items: flex-start;
   gap: 1.5rem;
   padding: 2rem;
-  background: var(--gray-100);
+  background: var(--gray-100) !important;
   border-radius: var(--border-radius);
   transition: var(--transition);
   border: 1px solid var(--gray-200);
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 10 !important;
 }
 
 .contact-method:hover {
@@ -261,10 +285,14 @@ main {
 }
 
 .form-container h2 {
-  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: block;
   visibility: visible;
 }
@@ -414,10 +442,14 @@ main {
 
 .contact-map h2 {
   text-align: center;
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin-bottom: 3rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .map-container {
