@@ -279,27 +279,52 @@ function handleContactAction(contactType) {
 // Staggered card animations
 function animatePartnershipCards() {
   const cards = document.querySelectorAll('.partnership-card');
+  
+  // Use requestAnimationFrame for smooth animation
   cards.forEach((card, index) => {
-    setTimeout(() => {
-      card.classList.add('card-animate-in');
-    }, index * 150);
+    // Reset to initial state
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px) scale(0.95)';
+    card.style.willChange = 'transform, opacity';
+    
+    // Animate with reduced delay for faster, smoother loading
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        card.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0) scale(1)';
+        
+        // Reset will-change after animation
+        setTimeout(() => {
+          card.style.willChange = 'auto';
+        }, 400);
+      }, index * 80); // Reduced from 150ms to 80ms
+    });
   });
 }
 
-// Success stories animation
+// Success stories animation - optimized for smooth loading
 function animateSuccessStories() {
   const stories = document.querySelectorAll('.story-card');
   stories.forEach((story, index) => {
     // Set initial state
     story.style.opacity = '0';
-    story.style.transform = 'translateY(20px)';
-    story.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    story.style.transform = 'translateY(15px)';
+    story.style.willChange = 'transform, opacity';
+    story.style.transition = 'opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
     
-    // Animate to final state with shorter delay
-    setTimeout(() => {
-      story.style.opacity = '1';
-      story.style.transform = 'translateY(0)';
-    }, index * 100); // Reduced from 200ms to 100ms for faster animation
+    // Animate to final state with requestAnimationFrame for smoothness
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        story.style.opacity = '1';
+        story.style.transform = 'translateY(0)';
+        
+        // Reset will-change after animation
+        setTimeout(() => {
+          story.style.willChange = 'auto';
+        }, 300);
+      }, index * 60); // Further reduced delay for faster loading
+    });
   });
 }
 

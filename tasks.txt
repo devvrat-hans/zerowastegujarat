@@ -332,7 +332,7 @@ The cta section is not uniform across all the pages of the website. The one on t
 
 - Remove that blurr thing that we have at the bottom of the hero section of the homepage of the website. Also go through the rules.md once you complete the tasks assigned to you.    
 
-Now, we need to add a chatbot to the website. based on the content on the website and the content peresent in the chatbot-knowledgebase.txt. The chatbot should have some predefined questions and answers to those questions. The first page of the chatbot should contain the categories of the questions followed by a set of questions and the last question in each category should be that if you didn't find your questions and then give them the contact information along with the contact form on the contact us page link. The chatbot should be present on all the pages of the website. The files that you should create are: chatbot.html in the templates/shared folder, chatbot.css in the css folder, chatbot.js in the css folder. Add these files to the templates/shared folder and load them using the templates.js file on all the pages of the website. The chatbot should be loaded to each and every page of the website via the templates.js. Also go through the rules.md once you complete the tasks assigned to you.
+- Now, we need to add a chatbot to the website. based on the content on the website and the content peresent in the chatbot-knowledgebase.txt. The chatbot should have some predefined questions and answers to those questions. The first page of the chatbot should contain the categories of the questions followed by a set of questions and the last question in each category should be that if you didn't find your questions and then give them the contact information along with the contact form on the contact us page link. The chatbot should be present on all the pages of the website. The files that you should create are: chatbot.html in the templates/shared folder, chatbot.css in the css folder, chatbot.js in the css folder. Add these files to the templates/shared folder and load them using the templates.js file on all the pages of the website. The chatbot should be loaded to each and every page of the website via the templates.js. Also go through the rules.md once you complete the tasks assigned to you.
 
 - For the image section on the cards udner this heading, Why Choose Our Products? on the products page be like the image section on the cards under Our Recycling Process section on the our servies page. Also go through the rules.md once you complete the tasks assigned to you.          
 
@@ -343,3 +343,31 @@ Now, we need to add a chatbot to the website. based on the content on the websit
 - The cards under this heading: Partnership Opportunities should load fast and smoothly as we scroll down the page. Also go through the rules.md once you complete the tasks assigned to you. 
 
 - The modified content is not visible on the website of the contact us page. Like the content is there on the html but is not visible on the show preview thing. Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- The cards under this heading: Partnership Opportunities, load with a stutter. I want them to load fast and smoothly as I scroll down the page. Also go through the rules.md once you complete the tasks assigned to you.
+
+- On the cards in the Get In Touch section, can we remove the green color from the background of the images. AAlso go through the rules.md once you complete the tasks assigned to you.
+
+The width of the cta on the homepage is a bit more than that on the other pages of the website. Make sure that the width of the cta is same on each and every page of the website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Improve the css of the page in the chatbot which appears when we click on didn't find your questions. improve its css and make sure that the background is white. Also go through the rules.md once you complete the tasks assigned to you.
+
+For the contact form on the contact us page of the website, give me an app script code that will add the details of entered by the user in a google sheet and also sends the email both to the user and to the given email address. Also make the contact form ready to be integrated wtih the app sccipt. Google sheet link: https://docs.google.com/spreadsheets/d/1FakkVktLgppJTSMpqHtCFNxOggsJal1XYyfXfXw9o6w/edit?pli=1&gid=0#gid=0 and the email address : zerowastegujarat@gmail.com
+
+- The page appearing which we click on the didn't find your question in the chatbot should have updated info as we have on the contact page. do that for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Remove this helpful and not helpful thing and the related code from the chatbot. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Remove the scroll to top and the related code from the entire website. Also go through the rules.md once you complete the tasks assigned to you.
+
+- When i click on the fill contact form button in the chatbot, it should take me to the Send Us a Message section on the contact us page of the website. Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- The contact information section in the footer is looking very weird. it currenly has skin colored background. make it have the background same as the primary color of the website. Also go through the rules.md once you complete the tasks assigned to you.   
+
+The homepage currenly is not mobile friendly, make its css mobile friendly. Also go through the rules.md once you complete the tasks assigned to you.
+
+- after clicking on this Didn't find your question? button in the chatbot, the section that appears should have independent css form the footer of the website. It should have white background. Also go through the rules.md once you complete the tasks assigned to you.
+
+- Update the contact information on the footer of the website. the updated contact info is available on the contact page of the website. Also go through the rules.md once you complete the tasks assigned to you.    
+
+Improve the css for the follow us buttons on the footer of the website. upon hovering, it completely vanishes. fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you. 

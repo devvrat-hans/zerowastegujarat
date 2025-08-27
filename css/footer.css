@@ -124,14 +124,21 @@
 }
 
 /* Contact Information */
-.footer-contact {
+.site-footer .footer-contact,
+.site-footer .footer-contact *,
+.footer-section.footer-contact,
+.footer-section.footer-contact * {
   background-color: #215f44 !important;
+}
+
+.footer-contact {
   text-align: left;
+  padding: 0;
 }
 
 .contact-info {
   margin-bottom: 2rem;
-  background-color: #215f44;
+  padding: 0;
 }
 
 .contact-item {
@@ -139,25 +146,23 @@
   flex-direction: column;
   margin-bottom: 1rem;
   gap: 0.25rem;
-  background-color: #215f44;
   align-items: flex-start;
+  padding: 0;
 }
 
 .contact-label {
   font-weight: 600;
-  color: #fff6ea;
+  color: #fff6ea !important;
   font-size: 0.95rem;
-  background-color: transparent;
   opacity: 0.9;
 }
 
 .contact-value {
-  color: #fff6ea;
+  color: #fff6ea !important;
   font-size: 0.95rem;
   opacity: 0.9;
   line-height: 1.4;
   font-weight: 400;
-  background-color: transparent;
 }
 
 .contact-value a {
@@ -193,19 +198,23 @@
   height: 40px;
   border-radius: 50%;
   background-color: rgba(255, 246, 234, 0.1);
-  color: #fff6ea;
+  color: #fff6ea !important;
   transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .social-links a:hover {
-  background-color: #fff6ea;
-  color: #215f44;
+  background-color: rgba(255, 246, 234, 0.2);
+  color: #ffffff !important;
   transform: translateY(-2px);
+  border-color: #fff6ea;
+  box-shadow: 0 4px 12px rgba(255, 246, 234, 0.2);
 }
 
 .social-links svg {
   width: 20px;
   height: 20px;
+  fill: currentColor;
 }
 
 /* Footer Bottom */

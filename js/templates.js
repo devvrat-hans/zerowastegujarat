@@ -30,7 +30,7 @@ class TemplateLoader {
         this.loadTemplate('navbar', 'navbar-container'),
         this.loadTemplate('footer', 'footer-container'),
         this.loadTemplate('cta', 'cta-container'),
-        this.loadTemplate('scroll-to-top', 'scroll-to-top-container')
+        this.loadTemplate('chatbot', 'chatbot-container')
       ]);
       
       // Initialize components after templates are loaded
@@ -105,7 +105,8 @@ class TemplateLoader {
     const stylesheets = [
       { href: `${this.basePath}css/navbar.css`, id: 'navbar-css' },
       { href: `${this.basePath}css/footer.css`, id: 'footer-css' },
-      { href: `${this.basePath}css/cta.css`, id: 'cta-css' }
+      { href: `${this.basePath}css/cta.css`, id: 'cta-css' },
+      { href: `${this.basePath}css/chatbot.css`, id: 'chatbot-css' }
     ];
     
     stylesheets.forEach(stylesheet => {
@@ -124,7 +125,8 @@ class TemplateLoader {
     const scripts = [
       { src: `${this.basePath}js/navbar.js`, id: 'navbar-js' },
       { src: `${this.basePath}js/footer.js`, id: 'footer-js' },
-      { src: `${this.basePath}js/cta.js`, id: 'cta-js' }
+      { src: `${this.basePath}js/cta.js`, id: 'cta-js' },
+      { src: `${this.basePath}js/chatbot.js`, id: 'chatbot-js' }
     ];
     
     // Load regular scripts

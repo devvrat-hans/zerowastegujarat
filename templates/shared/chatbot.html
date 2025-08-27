@@ -1,0 +1,173 @@
+<!-- Chatbot Widget -->
+<div class="chatbot-widget" id="chatbot-widget">
+    <div class="chatbot-toggle" id="chatbot-toggle">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 13.54 2.38 15.01 3.07 16.29L2 22L7.71 20.93C8.99 21.62 10.46 22 12 22C17.52 22 22 17.52 22 12S17.52 2 12 2ZM12 20C10.74 20 9.54 19.75 8.47 19.31L8 19.08L4.92 19.92L5.76 16.84L5.53 16.37C5.09 15.3 4.84 14.1 4.84 12.86C4.84 7.58 8.58 3.16 12 3.16C15.42 3.16 19.16 7.58 19.16 12.86S15.42 20 12 20Z" fill="white"/>
+            <circle cx="8.5" cy="12" r="1.5" fill="white"/>
+            <circle cx="12" cy="12" r="1.5" fill="white"/>
+            <circle cx="15.5" cy="12" r="1.5" fill="white"/>
+        </svg>
+        <span class="chatbot-toggle-text">Chat</span>
+    </div>
+</div>
+
+<!-- Chatbot Window -->
+<div class="chatbot-window" id="chatbot-window">
+    <div class="chatbot-header">
+        <div class="chatbot-header-info">
+            <img src="./images/logo/zerowastegujarat-logo-no-bg.png" alt="Zero Waste Gujarat" class="chatbot-logo">
+            <div class="chatbot-header-text">
+                <h4>Zero Waste Gujarat</h4>
+                <p>How can we help you today?</p>
+            </div>
+        </div>
+        <button class="chatbot-close" id="chatbot-close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4L4 12M4 4L12 12" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+    
+    <div class="chatbot-content" id="chatbot-content">
+        <!-- Categories View -->
+        <div class="chatbot-view" id="categories-view">
+            <div class="chatbot-welcome">
+                <h3>Welcome to Zero Waste Gujarat!</h3>
+                <p>Select a category to explore our frequently asked questions:</p>
+            </div>
+            
+            <div class="chatbot-categories">
+                <div class="chatbot-category" data-category="about">
+                    <div class="category-icon">🏢</div>
+                    <h4>About Our Company</h4>
+                    <p>Learn about our mission, vision, and operations</p>
+                </div>
+                
+                <div class="chatbot-category" data-category="services">
+                    <div class="category-icon">🔄</div>
+                    <h4>Our Services</h4>
+                    <p>Discover our textile recycling process and capabilities</p>
+                </div>
+                
+                <div class="chatbot-category" data-category="products">
+                    <div class="category-icon">📦</div>
+                    <h4>Products & Pricing</h4>
+                    <p>Explore our product range and pricing information</p>
+                </div>
+                
+                <div class="chatbot-category" data-category="sustainability">
+                    <div class="category-icon">🌱</div>
+                    <h4>Sustainability</h4>
+                    <p>Environmental impact and sustainability goals</p>
+                </div>
+                
+                <div class="chatbot-category" data-category="partnerships">
+                    <div class="category-icon">🤝</div>
+                    <h4>Partnerships</h4>
+                    <p>Collaboration opportunities and case studies</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Questions View -->
+        <div class="chatbot-view" id="questions-view" style="display: none;">
+            <div class="chatbot-back">
+                <button id="back-to-categories" class="back-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 12L6 8L10 4" stroke="#215f44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Back to Categories
+                </button>
+            </div>
+            
+            <div class="category-title" id="category-title"></div>
+            
+            <div class="chatbot-questions" id="chatbot-questions">
+                <!-- Questions will be populated dynamically -->
+            </div>
+        </div>
+        
+        <!-- Answer View -->
+        <div class="chatbot-view" id="answer-view" style="display: none;">
+            <div class="chatbot-back">
+                <button id="back-to-questions" class="back-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 12L6 8L10 4" stroke="#215f44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Back to Questions
+                </button>
+            </div>
+            
+            <div class="answer-content" id="answer-content">
+                <!-- Answer will be populated dynamically -->
+            </div>
+        </div>
+        
+        <!-- Contact View -->
+        <div class="chatbot-view" id="contact-view" style="display: none;">
+            <div class="chatbot-back">
+                <button id="back-from-contact" class="back-btn">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 12L6 8L10 4" stroke="#215f44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Back to Questions
+                </button>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Couldn't find what you're looking for? We'd love to help you!</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">🏭</div>
+                        <div class="contact-details">
+                            <strong>Facility Address</strong>
+                            <p>Zero Waste Gujarat<br>Plot No. XXX, Industrial Area Phase-II<br>Ahmedabad - 382XXX, Gujarat, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <strong>Phone Numbers</strong>
+                            <p>Operations: <a href="tel:+917878761377">+91-7878761377</a> (Ravi Dhamecha)</p>
+                            <p>Sales Enquiry: <a href="tel:+91XXXXXXXXX">+91-XXXXX-XXXXX</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <strong>Email Addresses</strong>
+                            <p>General: <a href="mailto:info@zerowastegujarat.com">info@zerowastegujarat.com</a></p>
+                            <p>Business: <a href="mailto:ravi@zerowastegujarat.com">ravi@zerowastegujarat.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">⏰</div>
+                        <div class="contact-details">
+                            <strong>Business Hours</strong>
+                            <p>Monday - Saturday: 9:00 AM - 6:00 PM IST<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-link">
+                    <a href="./contact.html#contactForm" class="contact-form-btn">
+                        📝 Fill Contact Form
+                    </a>
+                    <p>For detailed inquiries, please visit our contact page</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="chatbot-footer">
+        <p>Powered by Zero Waste Gujarat</p>
+    </div>
+</div>
+
+<!-- Chatbot Overlay -->
+<div class="chatbot-overlay" id="chatbot-overlay"></div>
