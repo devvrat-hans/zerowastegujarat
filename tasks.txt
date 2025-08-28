@@ -370,4 +370,19 @@ The homepage currenly is not mobile friendly, make its css mobile friendly. Also
 
 - Update the contact information on the footer of the website. the updated contact info is available on the contact page of the website. Also go through the rules.md once you complete the tasks assigned to you.    
 
-Improve the css for the follow us buttons on the footer of the website. upon hovering, it completely vanishes. fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you. 
+- Improve the css for the follow us buttons on the footer of the website. upon hovering, it completely vanishes. fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you.
+
+- getting this eror in teh app script code: 5:25:39 AM	Notice	Execution started 5:25:39 AM	Error	Error processing form submission: [TypeError: Cannot read properties of undefined (reading 'postData')] 5:25:41 AM	Notice	Execution completed Also go through the rules.md once you complete the tasks assigned to you.
+
+- When i click on the testrun then i get these logs: Execution log 5:27:55 AM	Notice	Execution started 5:27:54 AM	Error	Error processing form submission: [Error: Invalid request: Missing form data] 5:27:56 AM	Notice	Execution completed Fix this thing for me. Also go through the rules.md once you complete the tasks assigned to you. I have shifted the code to contact-form.gs, make edits in that.
+
+getting this error in teh console when i submit the contact forom: POST https://script.google.com/macros/s/AKfycbwyEU4QMl_t7XleM_xUZJB1H-RMyzXjRS4f0cCLzIuF0Rk_1zCh1TXXwi3lZv00a4iv/exec net::ERR_FAILED
+submitToAppsScript @ contact-form.js:212
+handleSubmit @ contact-form.js:181
+(anonymous) @ contact-form.js:25Understand this error
+contact-form.js:191 Form submission error: TypeError: Failed to fetch
+    at ContactFormHandler.submitToAppsScript (contact-form.js:212:32)
+    at ContactFormHandler.handleSubmit (contact-form.js:181:41)
+    at HTMLFormElement.<anonymous> (contact-form.js:25:62)
+
+- Make sure that this line is not bold in teh deployed website: This strategy leverages your strong operational foundation, market positioning in Gujarat's textile ecosystem, and the growing sustainability trend to build a ₹40+ crore enterprise ready for public markets within 3-4 years.

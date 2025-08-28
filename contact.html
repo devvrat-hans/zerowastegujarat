@@ -126,60 +126,68 @@
               <h2>Send Us a Message</h2>
               <p>Fill out the form below and we'll get back to you within 24 hours.</p>
               
-              <form class="contact-form" id="contactForm">
+              <form class="contact-form" id="contactForm" method="POST" action="" novalidate>
                 <div class="form-group">
                   <label for="fullName">Full Name *</label>
-                  <input type="text" id="fullName" name="fullName" required>
+                  <input type="text" id="fullName" name="fullName" required autocomplete="name" placeholder="Enter your full name" maxlength="100">
                 </div>
                 
                 <div class="form-row">
                   <div class="form-group">
                     <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="your.email@example.com" maxlength="254">
                   </div>
                   
                   <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+91-XXXXX-XXXXX" maxlength="15">
                   </div>
                 </div>
                 
                 <div class="form-group">
                   <label for="company">Company/Organization</label>
-                  <input type="text" id="company" name="company">
+                  <input type="text" id="company" name="company" autocomplete="organization" placeholder="Enter your company name" maxlength="100">
                 </div>
                 
                 <div class="form-group">
                   <label for="subject">Subject *</label>
                   <select id="subject" name="subject" required>
                     <option value="">Select a topic...</option>
-                    <option value="partnership">Partnership Opportunities</option>
-                    <option value="products">Product Inquiries</option>
-                    <option value="services">Service Requests</option>
-                    <option value="carbon-credits">Carbon Credits</option>
-                    <option value="facility-visit">Facility Visit</option>
-                    <option value="technical-consultation">Technical Consultation</option>
-                    <option value="custom-solutions">Custom Solution Development</option>
-                    <option value="sustainability-reporting">Sustainability Reporting</option>
-                    <option value="general">General Inquiry</option>
-                    <option value="other">Other</option>
+                    <option value="Partnership Opportunities">Partnership Opportunities</option>
+                    <option value="Product Inquiries">Product Inquiries</option>
+                    <option value="Service Requests">Service Requests</option>
+                    <option value="Carbon Credits">Carbon Credits</option>
+                    <option value="Facility Visit">Facility Visit</option>
+                    <option value="Technical Consultation">Technical Consultation</option>
+                    <option value="Custom Solution Development">Custom Solution Development</option>
+                    <option value="Sustainability Reporting">Sustainability Reporting</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
                 
                 <div class="form-group">
                   <label for="message">Message *</label>
-                  <textarea id="message" name="message" rows="6" placeholder="Tell us about your project or inquiry..." required></textarea>
+                  <textarea id="message" name="message" rows="6" placeholder="Tell us about your project or inquiry..." required maxlength="1000" minlength="10"></textarea>
+                  <small class="char-counter">0/1000 characters</small>
                 </div>
                 
                 <div class="form-group checkbox-group">
                   <label class="checkbox-label">
-                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="on">
                     <span class="checkmark"></span>
                     I'd like to receive updates about Zero Waste Gujarat's services and sustainability initiatives.
                   </label>
                 </div>
                 
-                <button type="submit" class="btn-submit">
+                <div class="form-group">
+                  <small class="form-note">
+                    By submitting this form, you agree to be contacted by Zero Waste Gujarat regarding your inquiry. 
+                    We respect your privacy and will not share your information with third parties.
+                  </small>
+                </div>
+                
+                <button type="submit" class="btn-submit" id="submitBtn">
                   <span>Send Message</span>
                   <span class="btn-icon">→</span>
                 </button>
